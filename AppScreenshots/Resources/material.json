@@ -1,0 +1,406 @@
+[
+ {
+ "commendType" : 0,
+ "listImageName" : "show_1",
+ "materialParameterList" : [
+                            {
+                            "showImageName" : "show_1_1.jpg",
+                            "sourceImageName" : "source_1_1.jpg",
+                            "screenShotX" : 83,
+                            "screenShotY" : 222,
+                            "screenShotWidth" : 208,
+                            "screenShotHeight" : 367,
+                            "titleY" : 79,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "feffff",
+                            "subtitleY" : 119,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "feffff"
+                            },{
+                            "showImageName" : "show_1_2.jpg",
+                            "sourceImageName" : "source_1_2.jpg",
+                            "screenShotX" : 83,
+                            "screenShotY" : 222,
+                            "screenShotWidth" : 208,
+                            "screenShotHeight" : 367,
+                            "titleY" : 79,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "cf8905",
+                            "subtitleY" : 119,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "f8ac19"
+                            },{
+                            "showImageName" : "show_1_3.jpg",
+                            "sourceImageName" : "source_1_3.jpg",
+                            "screenShotX" : 83,
+                            "screenShotY" : 222,
+                            "screenShotWidth" : 208,
+                            "screenShotHeight" : 367,
+                            "titleY" : 79,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "ffffff",
+                            "subtitleY" : 119,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "ffffff"
+                            },{
+                            "showImageName" : "show_1_4.jpg",
+                            "sourceImageName" : "source_1_4.jpg",
+                            "screenShotX" : 83,
+                            "screenShotY" : 222,
+                            "screenShotWidth" : 208,
+                            "screenShotHeight" : 367,
+                            "titleY" : 79,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "5eb62c",
+                            "subtitleY" : 119,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "7ed14d"
+                            },{
+                            "showImageName" : "show_1_5.jpg",
+                            "sourceImageName" : "source_1_5.jpg",
+                            "screenShotX" : 83,
+                            "screenShotY" : 222,
+                            "screenShotWidth" : 208,
+                            "screenShotHeight" : 367,
+                            "titleY" : 79,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "ffffff",
+                            "subtitleY" : 119,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "ffffff"
+                            }
+                            ]
+ },{
+ "commendType" : 1,
+ "listImageName" : "show_2",
+ "materialParameterList" : [
+                            {
+                            "showImageName" : "show_2_1.jpg",
+                            "sourceImageName" : "source_2_1.jpg",
+                            "screenShotX" : 61.5,
+                            "screenShotY" : 224,
+                            "screenShotWidth" : 252.5,
+                            "screenShotHeight" : 443,
+                            "titleY" : 58,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "48a1e5",
+                            "subtitleY" : 104,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "76b4e5"
+                            },{
+                            "showImageName" : "show_2_2.jpg",
+                            "sourceImageName" : "source_2_2.jpg",
+                            "screenShotX" : 61.5,
+                            "screenShotY" : 224,
+                            "screenShotWidth" : 252.5,
+                            "screenShotHeight" : 443,
+                            "titleY" : 58,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "b8b8b8",
+                            "subtitleY" : 104,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "838383"
+                            }
+                            ]
+ },{
+ "commendType" : 1,
+ "listImageName" : "show_3",
+ "materialParameterList" : [
+                            {
+                            "showImageName" : "show_3_1.jpg",
+                            "sourceImageName" : "source_3_1.jpg",
+                            "screenShotX" : 81,
+                            "screenShotY" : 192,
+                            "screenShotWidth" : 231,
+                            "screenShotHeight" : 411,
+                            "accessoryImageName" : "accessory_3_1.png",
+                            "accessoryX" : 73,
+                            "accessoryY" : 554,
+                            "accessoryWidth" : 65.5,
+                            "accessoryHeight" : 90,
+                            "coverImageName" : "cover_3_1.png",
+                            "coverX" : 0,
+                            "coverY" : 545.5,
+                            "coverWidth" : 375,
+                            "coverHeight" : 121.5,
+                            "titleY" : 54,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "0bd857",
+                            "subtitleY" : 93,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "65e098"
+                            },{
+                            "showImageName" : "show_3_2.jpg",
+                            "sourceImageName" : "source_3_2.jpg",
+                            "screenShotX" : 81,
+                            "screenShotY" : 192,
+                            "screenShotWidth" : 231,
+                            "screenShotHeight" : 411,
+                            "accessoryImageName" : "accessory_3_2.png",
+                            "accessoryX" : 17,
+                            "accessoryY" : 308,
+                            "accessoryWidth" : 81,
+                            "accessoryHeight" : 91,
+                            "coverImageName" : "cover_3_2.png",
+                            "coverX" : 0,
+                            "coverY" : 545.5,
+                            "coverWidth" : 375,
+                            "coverHeight" : 121.5,
+                            "titleY" : 54,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "ff7283",
+                            "subtitleY" : 93,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "fe97a2"
+                            },{
+                            "showImageName" : "show_3_3.jpg",
+                            "sourceImageName" : "source_3_3.jpg",
+                            "screenShotX" : 81,
+                            "screenShotY" : 192,
+                            "screenShotWidth" : 231,
+                            "screenShotHeight" : 411,
+                            "accessoryImageName" : "accessory_3_3.png",
+                            "accessoryX" : 28,
+                            "accessoryY" : 523,
+                            "accessoryWidth" : 79,
+                            "accessoryHeight" : 132.5,
+                            "coverImageName" : "cover_3_3.png",
+                            "coverX" : 0,
+                            "coverY" : 545.5,
+                            "coverWidth" : 375,
+                            "coverHeight" : 121.5,
+                            "titleY" : 54,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "fb9b15",
+                            "subtitleY" : 93,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "fbb949"
+                            },{
+                            "showImageName" : "show_3_4.jpg",
+                            "sourceImageName" : "source_3_4.jpg",
+                            "screenShotX" : 81,
+                            "screenShotY" : 192,
+                            "screenShotWidth" : 231,
+                            "screenShotHeight" : 411,
+                            "accessoryImageName" : "accessory_3_4.png",
+                            "accessoryX" : 30,
+                            "accessoryY" : 526,
+                            "accessoryWidth" : 106,
+                            "accessoryHeight" : 107,
+                            "coverImageName" : "cover_3_4.png",
+                            "coverX" : 0,
+                            "coverY" : 545.5,
+                            "coverWidth" : 375,
+                            "coverHeight" : 121.5,
+                            "titleY" : 54,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "32aafe",
+                            "subtitleY" : 93,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "7cc4f6"
+                            },{
+                            "showImageName" : "show_3_5.jpg",
+                            "sourceImageName" : "source_3_5.jpg",
+                            "screenShotX" : 81,
+                            "screenShotY" : 192,
+                            "screenShotWidth" : 231,
+                            "screenShotHeight" : 411,
+                            "coverImageName" : "cover_3_5.png",
+                            "coverX" : 0,
+                            "coverY" : 545.5,
+                            "coverWidth" : 375,
+                            "coverHeight" : 121.5,
+                            "titleY" : 54,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "fe72b1",
+                            "subtitleY" : 93,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "ff8ec1"
+                            }
+                            ]
+ },{
+ "commendType" : 1,
+ "listImageName" : "show_4",
+ "materialParameterList" : [
+                            {
+                            "showImageName" : "show_4_1.jpg",
+                            "sourceImageName" : "source_4_1.jpg",
+                            "screenShotX" : 85,
+                            "screenShotY" : 224,
+                            "screenShotWidth" : 204,
+                            "screenShotHeight" : 363,
+                            "titleY" : 80,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "95d2ff",
+                            "subtitleY" : 119,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "acd8ff"
+                            },{
+                            "showImageName" : "show_4_2.jpg",
+                            "sourceImageName" : "source_4_2.jpg",
+                            "screenShotX" : 85,
+                            "screenShotY" : 224,
+                            "screenShotWidth" : 204,
+                            "screenShotHeight" : 363,
+                            "titleY" : 80,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "ffbabd",
+                            "subtitleY" : 119,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "ffd0d4"
+                            },{
+                            "showImageName" : "show_4_3.jpg",
+                            "sourceImageName" : "source_4_3.jpg",
+                            "screenShotX" : 85,
+                            "screenShotY" : 224,
+                            "screenShotWidth" : 204,
+                            "screenShotHeight" : 363,
+                            "titleY" : 80,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "4ce674",
+                            "subtitleY" : 119,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "6ceb82"
+                            },{
+                            "showImageName" : "show_4_4.jpg",
+                            "sourceImageName" : "source_4_4.jpg",
+                            "screenShotX" : 85,
+                            "screenShotY" : 224,
+                            "screenShotWidth" : 204,
+                            "screenShotHeight" : 363,
+                            "titleY" : 80,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "b578ef",
+                            "subtitleY" : 119,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "d69dff"
+                            },{
+                            "showImageName" : "show_4_5.jpg",
+                            "sourceImageName" : "source_4_5.jpg",
+                            "screenShotX" : 85,
+                            "screenShotY" : 224,
+                            "screenShotWidth" : 204,
+                            "screenShotHeight" : 363,
+                            "titleY" : 80,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "ffbd8c",
+                            "subtitleY" : 119,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "ffcba4"
+                            }
+                            ]
+ },{
+ "commendType" : 1,
+ "listImageName" : "show_5",
+ "materialParameterList" : [
+                            {
+                            "showImageName" : "show_5_1.jpg",
+                            "sourceImageName" : "source_5_1.jpg",
+                            "screenShotX" : 54,
+                            "screenShotY" : 139,
+                            "screenShotWidth" : 267,
+                            "screenShotHeight" : 479,
+                            "titleY" : 49,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "3ede62",
+                            "subtitleY" : 89,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "74e78a"
+                            }
+                            ]
+ },{
+ "commendType" : 1,
+ "listImageName" : "show_6",
+ "materialParameterList" : [
+                            {
+                            "showImageName" : "show_6_1.jpg",
+                            "sourceImageName" : "source_6_1.jpg",
+                            "screenShotX" : 62,
+                            "screenShotY" : 224,
+                            "screenShotWidth" : 252,
+                            "screenShotHeight" : 443,
+                            "titleY" : 60,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "545051",
+                            "subtitleY" : 0,
+                            "subtitleFontSize" : 0,
+                            "subtitleTextColorHex" : ""
+                            },{
+                            "showImageName" : "show_6_2.jpg",
+                            "sourceImageName" : "source_6_2.jpg",
+                            "screenShotX" : 62,
+                            "screenShotY" : 224,
+                            "screenShotWidth" : 252,
+                            "screenShotHeight" : 443,
+                            "titleY" : 60,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "fffefd",
+                            "subtitleY" : 0,
+                            "subtitleFontSize" : 0,
+                            "subtitleTextColorHex" : ""
+                            }
+                            ]
+ },{
+ "commendType" : 1,
+ "listImageName" : "show_7",
+ "materialParameterList" : [
+                            {
+                            "showImageName" : "show_7_1.jpg",
+                            "sourceImageName" : "source_7_1.jpg",
+                            "screenShotX" : 61,
+                            "screenShotY" : 224,
+                            "screenShotWidth" : 254,
+                            "screenShotHeight" : 444,
+                            "titleY" : 65,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "575556",
+                            "subtitleY" : 104,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "575556"
+                            }
+                            ]
+ },{
+ "commendType" : 1,
+ "listImageName" : "show_8",
+ "materialParameterList" : [
+                            {
+                            "showImageName" : "show_8_1.jpg",
+                            "sourceImageName" : "source_8_1.jpg",
+                            "screenShotX" : 60,
+                            "screenShotY" : 224,
+                            "screenShotWidth" : 255,
+                            "screenShotHeight" : 443,
+                            "titleY" : 65,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "f9ffff",
+                            "subtitleY" : 104,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "f9ffff"
+                            }
+                            ]
+ },{
+ "commendType" : 1,
+ "listImageName" : "show_9",
+ "materialParameterList" : [
+                            {
+                            "showImageName" : "show_9_1.jpg",
+                            "sourceImageName" : "source_9_1.jpg",
+                            "screenShotX" : 61,
+                            "screenShotY" : 224,
+                            "screenShotWidth" : 254,
+                            "screenShotHeight" : 442,
+                            "coverImageName" : "cover_9_1.png",
+                            "coverX" : 0,
+                            "coverY" : 603.5,
+                            "coverWidth" : 375,
+                            "coverHeight" : 63.5,
+                            "titleY" : 65,
+                            "titleFontSize" : 29,
+                            "titleTextColorHex" : "fffdfd",
+                            "subtitleY" : 104,
+                            "subtitleFontSize" : 20,
+                            "subtitleTextColorHex" : "fffdfd"
+                            }
+                            ]
+ }
+ ]
