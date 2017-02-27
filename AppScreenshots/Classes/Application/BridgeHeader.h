@@ -18,4 +18,7 @@
 // U-Share分享面板SDK，未添加分享面板SDK可将此行去掉
 #import "UShareUI/UShareUI.h"
 
+// 模糊处理
+#import "CTImageSmearViewController.h"
+
 #endif /* BridgeHeader_h */

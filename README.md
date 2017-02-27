@@ -36,8 +36,11 @@ If the compilation fails after downloading the project, check that the `XCode` v
 
 ![image](https://github.com/6ag/AppScreenshots/blob/master/Show/3.gif)
 
+### Privacy information Gaussian blur 隐私信息高斯模糊
+
+![image](https://github.com/6ag/AppScreenshots/blob/master/Show/4.jpg)
+
 ## license 许可
 
-[MIT](https://raw.githubusercontent.com/Finb/V2ex-Swift/master/LICENSE) © [六阿哥](https://github.com/6ag)
-
+[MIT](https://github.com/6ag/AppScreenshots/blob/master/LICENSE) © [六阿哥](https://github.com/6ag)
 

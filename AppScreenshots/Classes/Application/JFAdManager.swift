@@ -109,6 +109,47 @@ class JFAdManager: NSObject {
         isShow = true && !isSharedHide
     }
     
+    /// 弹出分享提示信息
+    ///
+    /// - Parameter vc: 需要弹出的控制器
+    func showShareAlert(vc: UIViewController) -> Bool {
+        // 判断有没有分享过，如果没有则要求分享一次
+        if !UserDefaults.standard.bool(forKey: "isShouldSave") && !UserDefaults.standard.bool(forKey: "isUpdatingVersion") {
+            let alertC = UIAlertController(title: "第一次保存需要先分享哦", message: "分享后2天无广告！独乐乐不如众乐乐，好东西要分享给身边的朋友们哦！", preferredStyle: .alert)
+            alertC.addAction(UIAlertAction(title: "立即分享", style: .default, handler: { [weak vc] (_) in
+                UMSocialUIManager.showShareMenuViewInWindow { (platformType, userInfo) in
+                    let messageObject = UMSocialMessageObject()
+                    let shareObject = UMShareWebpageObject.shareObject(withTitle: "开发者专用应用截图制作工具", descr: "轻松快速生成漂亮的app应用截图，提升您的app装机量!", thumImage: UIImage(named: "app_icon"))
+                    shareObject?.webpageUrl = "https://itunes.apple.com/app/id\(APPSTORE_ID)"
+                    messageObject.shareObject = shareObject
+                    
+                    UMSocialManager.default().share(to: platformType, messageObject: messageObject, currentViewController: vc) { (data, error) in
+                        if error == nil {
+                            JFProgressHUD.showSuccessWithStatus("分享成功，谢谢支持")
+                            UserDefaults.standard.set(true, forKey: "isShouldSave")
+                            
+                            // 设置隐藏广告时间
+                            let currentDateString = JFAdManager.shared.dateFormatter.string(from: Date())
+                            log("从currentDateString = \(currentDateString)起，2天内无广告")
+                            UserDefaults.standard.set(currentDateString, forKey: "removeAdAtTime")
+                            UserDefaults.standard.synchronize()
+                            JFAdManager.shared.updateSharedHideAd()
+                            
+                        } else {
+                            JFProgressHUD.showSuccessWithStatus("分享失败，请换一个平台分享")
+                            UserDefaults.standard.set(false, forKey: "isShouldSave")
+                        }
+                    }
+                }
+            }))
+            alertC.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
+            vc.present(alertC, animated: true, completion: nil)
+            return true
+        } else {
+            return false
+        }
+    }
+    
     /// 更新分享隐藏广告的标识状态
     func updateSharedHideAd() {
         if let removeAdAtTime = UserDefaults.standard.string(forKey: "removeAdAtTime") {

@@ -86,12 +86,13 @@ class JFDiyViewController: UIViewController {
     
     /// 触摸屏幕后弹出视图
     fileprivate lazy var contextSheet: JFContextSheet = {
-        let contextItem1 = JFContextItem(itemName: "返回", itemIcon: "fanhuijiantou")
-        let contextItem2 = JFContextItem(itemName: "原图", itemIcon: "tupian")
-        let contextItem3 = JFContextItem(itemName: "贴纸", itemIcon: "katie")
-        let contextItem4 = JFContextItem(itemName: "保存", itemIcon: "diy_save")
+        let contextItem1 = JFContextItem(itemName: "返回", itemIcon: "diy_item_fanhuijiantou")
+        let contextItem2 = JFContextItem(itemName: "原图", itemIcon: "diy_item_tupian")
+        let contextItem3 = JFContextItem(itemName: "贴纸", itemIcon: "diy_item_katie")
+        let contextItem4 = JFContextItem(itemName: "打码", itemIcon: "diy_item_smear")
+        let contextItem5 = JFContextItem(itemName: "保存", itemIcon: "diy_item_save")
         
-        let contextSheet = JFContextSheet(items: [contextItem1, contextItem2, contextItem3, contextItem4])
+        let contextSheet = JFContextSheet(items: [contextItem1, contextItem2, contextItem3, contextItem4, contextItem5])
         contextSheet.delegate = self
         return contextSheet
     }()
@@ -234,7 +235,7 @@ extension JFDiyViewController {
 }
 
 // MARK: - 贴纸视图操作
-extension JFDiyViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension JFDiyViewController: UICollectionViewDelegate, UICollectionViewDataSource, JFPasterStageViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == pasterGroupBottomView {
@@ -362,6 +363,17 @@ extension JFDiyViewController: UICollectionViewDelegate, UICollectionViewDataSou
         
     }
     
+    /**
+     点击了背景视图 - XTPasterStageViewDelegate
+     */
+    public func didTappedBgView() {
+        if isShowPasterWidget {
+            hidePasterWidget()
+        } else {
+            showPasterWidget()
+        }
+    }
+    
 }
 
 // MARK: - 监听滚动
@@ -385,6 +397,8 @@ extension JFDiyViewController: JFContextSheetDelegate {
             originImage()
         case "贴纸":
             paster()
+        case "打码":
+            gaussianblur()
         case "保存":
             save()
         default:
@@ -422,32 +436,23 @@ extension JFDiyViewController: JFContextSheetDelegate {
         showPasterWidget()
     }
     
+    /// 模糊处理
+    fileprivate func gaussianblur() {
+        if let image = photoImageList?[Int(containerView.contentOffset.x / SCREEN_WIDTH)] {
+            print(image)
+            let smearVc = CTImageSmearViewController(image: image)
+            smearVc.delegate = self
+            smearVc.transitioningDelegate = self
+            smearVc.modalPresentationStyle = UIModalPresentationStyle.custom
+            present(smearVc, animated: true, completion: nil)
+        }
+    }
+    
     /// 保存
     fileprivate func save() {
         
-        // 判断有没有分享过，如果没有则要求分享一次
-        if !UserDefaults.standard.bool(forKey: "isShouldSave") && !UserDefaults.standard.bool(forKey: "isUpdatingVersion") {
-            let alertC = UIAlertController(title: "第一次保存需要先分享一次哦", message: "独乐乐不如众乐乐，好东西要分享给朋友们哦！跪谢支持", preferredStyle: .alert)
-            alertC.addAction(UIAlertAction(title: "立即分享", style: .default, handler: { [weak self] (_) in
-                UMSocialUIManager.showShareMenuViewInWindow { (platformType, userInfo) in
-                    let messageObject = UMSocialMessageObject()
-                    let shareObject = UMShareWebpageObject.shareObject(withTitle: "开发者专用应用截图制作工具", descr: "轻松快速生成漂亮的app应用截图，提升您的app装机量!", thumImage: UIImage(named: "app_icon"))
-                    shareObject?.webpageUrl = "https://itunes.apple.com/app/id\(APPSTORE_ID)"
-                    messageObject.shareObject = shareObject
-                    
-                    UMSocialManager.default().share(to: platformType, messageObject: messageObject, currentViewController: self) { (data, error) in
-                        if error == nil {
-                            JFProgressHUD.showSuccessWithStatus("分享成功，谢谢支持")
-                            UserDefaults.standard.set(true, forKey: "isShouldSave")
-                        } else {
-                            JFProgressHUD.showSuccessWithStatus("分享失败，请换一个平台分享")
-                            UserDefaults.standard.set(false, forKey: "isShouldSave")
-                        }
-                    }
-                }
-            }))
-            alertC.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
-            present(alertC, animated: true, completion: nil)
+        // 判断有没有分享过，如果没有则要求分享一次 - 如有需要分享则返回true
+        if JFAdManager.shared.showShareAlert(vc: self) {
             return
         }
         
@@ -495,19 +500,35 @@ extension JFDiyViewController: JFContextSheetDelegate {
     
 }
 
-// MARK: - XTPasterStageViewDelegate
-extension JFDiyViewController: JFPasterStageViewDelegate {
+// MARK: - CTImageSmearViewControllerDelegate
+extension JFDiyViewController: CTImageSmearViewControllerDelegate {
     
-    /**
-     点击了背景视图
-     */
-    public func didTappedBgView() {
-        if isShowPasterWidget {
-            hidePasterWidget()
-        } else {
-            showPasterWidget()
-        }
+    /// 已经涂抹过了图片
+    ///
+    /// - Parameter image: 被涂抹的图片
+    func didSmearPhoto(withResultImage image: UIImage) {
+        print(image)
+        let index = Int(containerView.contentOffset.x / SCREEN_WIDTH)
+        guard let imageView = containerView.viewWithTag(index + 1000) as? UIImageView else { return }
+        photoImageList?[index] = image
+        imageView.image = image
+        
     }
     
 }
 
+// MARK: - 相册列表转场动画
+extension JFDiyViewController: UIViewControllerTransitioningDelegate {
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return JFSmearPresentationController(presentedViewController: presented, presenting: presenting)
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return JFSmearPopoverModalAnimation()
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return JFSmearPopoverDismissAnimation()
+    }
+}

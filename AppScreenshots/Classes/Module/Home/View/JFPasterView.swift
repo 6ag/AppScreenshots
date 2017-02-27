@@ -173,8 +173,8 @@ class JFPasterView: UIView {
             }
             
             let ang = atan2(recognizer.location(in: superview).y - center.y, recognizer.location(in: superview).x - center.x)
-            let angleDiff  = deltaAngle - ang
-            self.transform = CGAffineTransform(rotationAngle: -(CGFloat)(angleDiff))
+            let angleDiff = deltaAngle - ang
+            self.transform = CGAffineTransform(rotationAngle: -angleDiff)
             setNeedsDisplay()
         } else if recognizer.state == .ended {
             prevPoint = recognizer.location(in: self)

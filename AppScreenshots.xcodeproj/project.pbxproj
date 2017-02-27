@@ -786,6 +786,16 @@
 		B255C5DD1E49CCAF00AF3988 /* JFContextSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B255C5DB1E49CCAF00AF3988 /* JFContextSheet.swift */; };
 		B2747AF11E4631C900E37888 /* JFPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2747AF01E4631C900E37888 /* JFPhotoCollectionViewCell.swift */; };
 		B2747AF31E4631D500E37888 /* JFTemplateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2747AF21E4631D500E37888 /* JFTemplateCollectionViewCell.swift */; };
+		B28E962F1E63D8F800E00078 /* CTImageEditUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B28E96231E63D8F800E00078 /* CTImageEditUtil.m */; };
+		B28E96301E63D8F800E00078 /* CTImageSmearBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = B28E96251E63D8F800E00078 /* CTImageSmearBottom.m */; };
+		B28E96311E63D8F800E00078 /* CTImageSmearTop.m in Sources */ = {isa = PBXBuildFile; fileRef = B28E96271E63D8F800E00078 /* CTImageSmearTop.m */; };
+		B28E96321E63D8F800E00078 /* CTImageSmearView.m in Sources */ = {isa = PBXBuildFile; fileRef = B28E96291E63D8F800E00078 /* CTImageSmearView.m */; };
+		B28E96331E63D8F800E00078 /* CTImageSmearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B28E962B1E63D8F800E00078 /* CTImageSmearViewController.m */; };
+		B28E96341E63D8F800E00078 /* Image.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B28E962C1E63D8F800E00078 /* Image.bundle */; };
+		B28E96351E63D8F800E00078 /* UIImage+EditImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B28E962E1E63D8F800E00078 /* UIImage+EditImageWithColor.m */; };
+		B28E96391E63F35600E00078 /* JFSmearPopoverDismissAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E96361E63F35600E00078 /* JFSmearPopoverDismissAnimation.swift */; };
+		B28E963A1E63F35600E00078 /* JFSmearPopoverModalAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E96371E63F35600E00078 /* JFSmearPopoverModalAnimation.swift */; };
+		B28E963B1E63F35600E00078 /* JFSmearPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E96381E63F35600E00078 /* JFSmearPresentationController.swift */; };
 		B2B13F401E45BB58001BD016 /* JFSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B13F3F1E45BB58001BD016 /* JFSettingViewController.swift */; };
 		B2B13F4B1E45C6C3001BD016 /* JFPopoverDismissAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B13F481E45C6C3001BD016 /* JFPopoverDismissAnimation.swift */; };
 		B2B13F4C1E45C6C3001BD016 /* JFPopoverModalAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B13F491E45C6C3001BD016 /* JFPopoverModalAnimation.swift */; };
@@ -1586,6 +1596,22 @@
 		B255C5DB1E49CCAF00AF3988 /* JFContextSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFContextSheet.swift; sourceTree = "<group>"; };
 		B2747AF01E4631C900E37888 /* JFPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		B2747AF21E4631D500E37888 /* JFTemplateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFTemplateCollectionViewCell.swift; sourceTree = "<group>"; };
+		B28E96221E63D8F800E00078 /* CTImageEditUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTImageEditUtil.h; sourceTree = "<group>"; };
+		B28E96231E63D8F800E00078 /* CTImageEditUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTImageEditUtil.m; sourceTree = "<group>"; };
+		B28E96241E63D8F800E00078 /* CTImageSmearBottom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTImageSmearBottom.h; sourceTree = "<group>"; };
+		B28E96251E63D8F800E00078 /* CTImageSmearBottom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTImageSmearBottom.m; sourceTree = "<group>"; };
+		B28E96261E63D8F800E00078 /* CTImageSmearTop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTImageSmearTop.h; sourceTree = "<group>"; };
+		B28E96271E63D8F800E00078 /* CTImageSmearTop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTImageSmearTop.m; sourceTree = "<group>"; };
+		B28E96281E63D8F800E00078 /* CTImageSmearView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTImageSmearView.h; sourceTree = "<group>"; };
+		B28E96291E63D8F800E00078 /* CTImageSmearView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTImageSmearView.m; sourceTree = "<group>"; };
+		B28E962A1E63D8F800E00078 /* CTImageSmearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTImageSmearViewController.h; sourceTree = "<group>"; };
+		B28E962B1E63D8F800E00078 /* CTImageSmearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTImageSmearViewController.m; sourceTree = "<group>"; };
+		B28E962C1E63D8F800E00078 /* Image.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Image.bundle; sourceTree = "<group>"; };
+		B28E962D1E63D8F800E00078 /* UIImage+EditImageWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EditImageWithColor.h"; sourceTree = "<group>"; };
+		B28E962E1E63D8F800E00078 /* UIImage+EditImageWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+EditImageWithColor.m"; sourceTree = "<group>"; };
+		B28E96361E63F35600E00078 /* JFSmearPopoverDismissAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFSmearPopoverDismissAnimation.swift; sourceTree = "<group>"; };
+		B28E96371E63F35600E00078 /* JFSmearPopoverModalAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFSmearPopoverModalAnimation.swift; sourceTree = "<group>"; };
+		B28E96381E63F35600E00078 /* JFSmearPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFSmearPresentationController.swift; sourceTree = "<group>"; };
 		B2B13F3F1E45BB58001BD016 /* JFSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFSettingViewController.swift; sourceTree = "<group>"; };
 		B2B13F481E45C6C3001BD016 /* JFPopoverDismissAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFPopoverDismissAnimation.swift; sourceTree = "<group>"; };
 		B2B13F491E45C6C3001BD016 /* JFPopoverModalAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFPopoverModalAnimation.swift; sourceTree = "<group>"; };
@@ -2638,6 +2664,7 @@
 		B24BB3D31E4198E60024CBB2 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				B28E96211E63D8F800E00078 /* CTImageEdit */,
 				B255C5D91E49CCAF00AF3988 /* JFContextSheet */,
 			);
 			path = Vendor;
@@ -2666,6 +2693,26 @@
 			path = JFContextSheet;
 			sourceTree = "<group>";
 		};
+		B28E96211E63D8F800E00078 /* CTImageEdit */ = {
+			isa = PBXGroup;
+			children = (
+				B28E96221E63D8F800E00078 /* CTImageEditUtil.h */,
+				B28E96231E63D8F800E00078 /* CTImageEditUtil.m */,
+				B28E96241E63D8F800E00078 /* CTImageSmearBottom.h */,
+				B28E96251E63D8F800E00078 /* CTImageSmearBottom.m */,
+				B28E96261E63D8F800E00078 /* CTImageSmearTop.h */,
+				B28E96271E63D8F800E00078 /* CTImageSmearTop.m */,
+				B28E96281E63D8F800E00078 /* CTImageSmearView.h */,
+				B28E96291E63D8F800E00078 /* CTImageSmearView.m */,
+				B28E962A1E63D8F800E00078 /* CTImageSmearViewController.h */,
+				B28E962B1E63D8F800E00078 /* CTImageSmearViewController.m */,
+				B28E962C1E63D8F800E00078 /* Image.bundle */,
+				B28E962D1E63D8F800E00078 /* UIImage+EditImageWithColor.h */,
+				B28E962E1E63D8F800E00078 /* UIImage+EditImageWithColor.m */,
+			);
+			path = CTImageEdit;
+			sourceTree = "<group>";
+		};
 		B2B13F471E45C6C3001BD016 /* Transition */ = {
 			isa = PBXGroup;
 			children = (
@@ -2675,6 +2722,9 @@
 				B236801E1E4C2AF300309D8B /* JFPhotoPresentationController.swift */,
 				B236801F1E4C2AF300309D8B /* JFPhotoPopoverModalAnimation.swift */,
 				B23680201E4C2AF300309D8B /* JFPhotoPopoverDismissAnimation.swift */,
+				B28E96361E63F35600E00078 /* JFSmearPopoverDismissAnimation.swift */,
+				B28E96371E63F35600E00078 /* JFSmearPopoverModalAnimation.swift */,
+				B28E96381E63F35600E00078 /* JFSmearPresentationController.swift */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -2960,6 +3010,7 @@
 				B21891581E4F7D6A00BD9AE7 /* Maruko_compress_90.png in Resources */,
 				B21890E91E4F7D6A00BD9AE7 /* HK_compress_8.png in Resources */,
 				B218915A1E4F7D6A00BD9AE7 /* Maruko_compress_92.png in Resources */,
+				B28E96341E63D8F800E00078 /* Image.bundle in Resources */,
 				B21890471E4F7D6A00BD9AE7 /* DA_compress_23.png in Resources */,
 				B2188FE41E4F7D6A00BD9AE7 /* COCO_compress_26.png in Resources */,
 				B21890571E4F7D6A00BD9AE7 /* DA_compress_38.png in Resources */,
@@ -3592,11 +3643,14 @@
 			files = (
 				B2378C051E5C8AB500762CC5 /* JFPasterStageView.swift in Sources */,
 				B23680211E4C2AF300309D8B /* JFPhotoPresentationController.swift in Sources */,
+				B28E96391E63F35600E00078 /* JFSmearPopoverDismissAnimation.swift in Sources */,
+				B28E962F1E63D8F800E00078 /* CTImageEditUtil.m in Sources */,
 				B23680251E4C2AFD00309D8B /* JFAlbumListViewController.swift in Sources */,
 				B2B7698B1E4D5A550089F276 /* JFPasterCollectionViewCell.swift in Sources */,
 				B2B6D7191E4A0AD600C6D6D4 /* JFPreviewView.swift in Sources */,
 				B2C2AF0C1E483B3A0032577B /* JFPhotoView.swift in Sources */,
 				B2551B861E50D15800FEE524 /* JFNetworkTools.swift in Sources */,
+				B28E96301E63D8F800E00078 /* CTImageSmearBottom.m in Sources */,
 				B2B13F4C1E45C6C3001BD016 /* JFPopoverModalAnimation.swift in Sources */,
 				B21892881E4F7DC000BD9AE7 /* JFPasterGroup.swift in Sources */,
 				9A9CA03B1E4F26F400F55092 /* FTPopOverMenu.swift in Sources */,
@@ -3606,7 +3660,10 @@
 				B2F9C20A1E421D1D00D2CC46 /* JFProgressHUD.swift in Sources */,
 				B2378C061E5C8AB500762CC5 /* JFPasterView.swift in Sources */,
 				B255C5DC1E49CCAF00AF3988 /* JFContextItem.swift in Sources */,
+				B28E96321E63D8F800E00078 /* CTImageSmearView.m in Sources */,
 				B23680271E4C311D00309D8B /* JFAlbumItemCollectionViewCell.swift in Sources */,
+				B28E96311E63D8F800E00078 /* CTImageSmearTop.m in Sources */,
+				B28E963B1E63F35600E00078 /* JFSmearPresentationController.swift in Sources */,
 				B2747AF11E4631C900E37888 /* JFPhotoCollectionViewCell.swift in Sources */,
 				B24296321E4B749E0087A1A0 /* JFAssetItem.swift in Sources */,
 				B22CC7F81E44CD68009C60E7 /* JFMaterial.swift in Sources */,
@@ -3614,6 +3671,7 @@
 				B2B13F4B1E45C6C3001BD016 /* JFPopoverDismissAnimation.swift in Sources */,
 				B2551B841E50D10F00FEE524 /* JFAppStoreApp.swift in Sources */,
 				B2747AF31E4631D500E37888 /* JFTemplateCollectionViewCell.swift in Sources */,
+				B28E963A1E63F35600E00078 /* JFSmearPopoverModalAnimation.swift in Sources */,
 				B22CC7F61E44C1DB009C60E7 /* JFHomeCollectionViewCell.swift in Sources */,
 				B2B6D71B1E4A191900C6D6D4 /* JFPhotoPickerViewController.swift in Sources */,
 				B255C5D81E49909A00AF3988 /* JFDiyViewController.swift in Sources */,
@@ -3626,6 +3684,8 @@
 				B23680231E4C2AF300309D8B /* JFPhotoPopoverDismissAnimation.swift in Sources */,
 				B24BB3D71E4199420024CBB2 /* AppDelegate.swift in Sources */,
 				B2B13F401E45BB58001BD016 /* JFSettingViewController.swift in Sources */,
+				B28E96331E63D8F800E00078 /* CTImageSmearViewController.m in Sources */,
+				B28E96351E63D8F800E00078 /* UIImage+EditImageWithColor.m in Sources */,
 				B218928A1E4F7E9600BD9AE7 /* JFPaster.swift in Sources */,
 				B2F9C2081E421C4D00D2CC46 /* UIImageExtension.swift in Sources */,
 				B218928C1E4F83C700BD9AE7 /* JFPasterGroupCollectionViewCell.swift in Sources */,
