@@ -36,6 +36,8 @@ func layoutVertical(iPhone6: CGFloat) -> CGFloat {
     var newHeight: CGFloat = 0
     
     switch iPhoneModel.getCurrentModel() {
+    case .iPhone4:
+        newHeight = iPhone6 * (480.0 / 667.0)
     case .iPhone5:
         newHeight = iPhone6 * (568.0 / 667.0)
     case .iPhone6:
@@ -59,6 +61,8 @@ func layoutHorizontal(iPhone6: CGFloat) -> CGFloat {
     var newWidth: CGFloat = 0
     
     switch iPhoneModel.getCurrentModel() {
+    case .iPhone4:
+        newWidth = iPhone6 * (320.0 / 375.0)
     case .iPhone5:
         newWidth = iPhone6 * (320.0 / 375.0)
     case .iPhone6:
@@ -82,6 +86,8 @@ func layoutFont(iPhone6: CGFloat) -> CGFloat {
     var newFont: CGFloat = 0
     
     switch iPhoneModel.getCurrentModel() {
+    case .iPhone4:
+        newFont = iPhone6 * (320.0 / 375.0)
     case .iPhone5:
         newFont = iPhone6 * (320.0 / 375.0)
     case .iPhone6:
@@ -114,7 +120,7 @@ enum iPhoneModel {
     static func getCurrentModel() -> iPhoneModel {
         switch SCREEN_HEIGHT {
         case 480:
-            return .iPhone4
+            return .iPhone4 // 如果没有适配iPad，则3.5英寸屏幕则是iPad屏幕
         case 568:
             return .iPhone5
         case 667:
@@ -125,6 +131,10 @@ enum iPhoneModel {
             return .iPad
         }
     }
+}
+
+func isIPad() -> Bool {
+    return UIDevice.current.model.contains("iPad")
 }
 
 // MARK: - 屏幕尺寸

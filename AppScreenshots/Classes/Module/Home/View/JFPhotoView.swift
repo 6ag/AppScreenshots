@@ -93,23 +93,23 @@ extension JFPhotoView {
         }
         
         screenShotImageView.snp.makeConstraints { (make) in
-            make.left.equalTo(layoutVertical(iPhone6: materialParameter.screenShotX))
+            make.left.equalTo(layoutHorizontal(iPhone6: materialParameter.screenShotX))
             make.top.equalTo(layoutVertical(iPhone6: materialParameter.screenShotY))
-            make.width.equalTo(layoutVertical(iPhone6: materialParameter.screenShotWidth))
+            make.width.equalTo(layoutHorizontal(iPhone6: materialParameter.screenShotWidth))
             make.height.equalTo(layoutVertical(iPhone6: materialParameter.screenShotHeight))
         }
         
         accessoryView.snp.updateConstraints { (make) in
-            make.left.equalTo(layoutVertical(iPhone6: materialParameter.accessoryX))
+            make.left.equalTo(layoutHorizontal(iPhone6: materialParameter.accessoryX))
             make.top.equalTo(layoutVertical(iPhone6: materialParameter.accessoryY))
-            make.width.equalTo(layoutVertical(iPhone6: materialParameter.accessoryWidth))
+            make.width.equalTo(layoutHorizontal(iPhone6: materialParameter.accessoryWidth))
             make.height.equalTo(layoutVertical(iPhone6: materialParameter.accessoryHeight))
         }
         
         coverView.snp.updateConstraints { (make) in
-            make.left.equalTo(layoutVertical(iPhone6: materialParameter.coverX))
+            make.left.equalTo(layoutHorizontal(iPhone6: materialParameter.coverX))
             make.top.equalTo(layoutVertical(iPhone6: materialParameter.coverY))
-            make.width.equalTo(layoutVertical(iPhone6: materialParameter.coverWidth))
+            make.width.equalTo(layoutHorizontal(iPhone6: materialParameter.coverWidth))
             make.height.equalTo(layoutVertical(iPhone6: materialParameter.coverHeight))
         }
         

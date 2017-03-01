@@ -12,7 +12,7 @@ import SnapKit
 fileprivate let HomeItemId = "HomeItemId"
 
 class JFHomeViewController: UIViewController {
-
+    
     /// 素材模型集合
     let materialList = JFMaterial.getMaterialList()
     

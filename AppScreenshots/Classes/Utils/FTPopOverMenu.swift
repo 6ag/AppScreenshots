@@ -101,7 +101,7 @@ public class FTPopOverMenu : NSObject {
     }()
     
     fileprivate lazy var backgroundView : UIView = {
-        let view = UIView(frame: UIScreen.main.bounds)
+        let view = UIView(frame: SCREEN_BOUNDS)
         view.backgroundColor = UIColor.clear
         view.addGestureRecognizer(self.tapGesture)
         return view
