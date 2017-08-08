@@ -782,8 +782,8 @@
 		B2551B841E50D10F00FEE524 /* JFAppStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2551B831E50D10F00FEE524 /* JFAppStoreApp.swift */; };
 		B2551B861E50D15800FEE524 /* JFNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2551B851E50D15800FEE524 /* JFNetworkTools.swift */; };
 		B255C5D81E49909A00AF3988 /* JFDiyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B255C5D71E49909A00AF3988 /* JFDiyViewController.swift */; };
-		B255C5DC1E49CCAF00AF3988 /* JFContextItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B255C5DA1E49CCAF00AF3988 /* JFContextItem.swift */; };
-		B255C5DD1E49CCAF00AF3988 /* JFContextSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B255C5DB1E49CCAF00AF3988 /* JFContextSheet.swift */; };
+		B267A9C21F32D4C60003C0B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B267A9C41F32D4C60003C0B9 /* InfoPlist.strings */; };
+		B267A9C91F32DF480003C0B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B267A9CB1F32DF480003C0B9 /* Localizable.strings */; };
 		B2747AF11E4631C900E37888 /* JFPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2747AF01E4631C900E37888 /* JFPhotoCollectionViewCell.swift */; };
 		B2747AF31E4631D500E37888 /* JFTemplateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2747AF21E4631D500E37888 /* JFTemplateCollectionViewCell.swift */; };
 		B28E962F1E63D8F800E00078 /* CTImageEditUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B28E96231E63D8F800E00078 /* CTImageEditUtil.m */; };
@@ -1592,8 +1592,13 @@
 		B2551B831E50D10F00FEE524 /* JFAppStoreApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFAppStoreApp.swift; sourceTree = "<group>"; };
 		B2551B851E50D15800FEE524 /* JFNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFNetworkTools.swift; sourceTree = "<group>"; };
 		B255C5D71E49909A00AF3988 /* JFDiyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFDiyViewController.swift; sourceTree = "<group>"; };
-		B255C5DA1E49CCAF00AF3988 /* JFContextItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFContextItem.swift; sourceTree = "<group>"; };
-		B255C5DB1E49CCAF00AF3988 /* JFContextSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFContextSheet.swift; sourceTree = "<group>"; };
+		B267A9BF1F32D3D30003C0B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		B267A9C31F32D4C60003C0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B267A9C51F32D4CA0003C0B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B267A9C61F32D4CB0003C0B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		B267A9CA1F32DF480003C0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B267A9CC1F32DF4A0003C0B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B267A9CD1F32DF4B0003C0B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B2747AF01E4631C900E37888 /* JFPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		B2747AF21E4631D500E37888 /* JFTemplateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFTemplateCollectionViewCell.swift; sourceTree = "<group>"; };
 		B28E96221E63D8F800E00078 /* CTImageEditUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTImageEditUtil.h; sourceTree = "<group>"; };
@@ -2538,6 +2543,8 @@
 		B24BB3B01E4198920024CBB2 /* AppScreenshots */ = {
 			isa = PBXGroup;
 			children = (
+				B267A9CB1F32DF480003C0B9 /* Localizable.strings */,
+				B267A9C41F32D4C60003C0B9 /* InfoPlist.strings */,
 				B24BB3B81E4198920024CBB2 /* Assets.xcassets */,
 				B24BB3BA1E4198920024CBB2 /* LaunchScreen.storyboard */,
 				B24BB3BD1E4198920024CBB2 /* Info.plist */,
@@ -2665,7 +2672,6 @@
 			isa = PBXGroup;
 			children = (
 				B28E96211E63D8F800E00078 /* CTImageEdit */,
-				B255C5D91E49CCAF00AF3988 /* JFContextSheet */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -2682,15 +2688,6 @@
 				B2188CBD1E4F7D6900BD9AE7 /* paster */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		B255C5D91E49CCAF00AF3988 /* JFContextSheet */ = {
-			isa = PBXGroup;
-			children = (
-				B255C5DA1E49CCAF00AF3988 /* JFContextItem.swift */,
-				B255C5DB1E49CCAF00AF3988 /* JFContextSheet.swift */,
-			);
-			path = JFContextSheet;
 			sourceTree = "<group>";
 		};
 		B28E96211E63D8F800E00078 /* CTImageEdit */ = {
@@ -2818,6 +2815,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = B24BB3A51E4198920024CBB2;
 			productRefGroup = B24BB3AF1E4198920024CBB2 /* Products */;
@@ -2853,6 +2851,7 @@
 				B218910E1E4F7D6A00BD9AE7 /* Maruko_compress_23.png in Resources */,
 				B218904F1E4F7D6A00BD9AE7 /* DA_compress_30.png in Resources */,
 				B21891911E4F7D6A00BD9AE7 /* SC_compress_2.png in Resources */,
+				B267A9C21F32D4C60003C0B9 /* InfoPlist.strings in Resources */,
 				B218903B1E4F7D6A00BD9AE7 /* DA_compress_123.png in Resources */,
 				B21890F61E4F7D6A00BD9AE7 /* HK_compress_91.png in Resources */,
 				B218905B1E4F7D6A00BD9AE7 /* DA_compress_41.png in Resources */,
@@ -2981,6 +2980,7 @@
 				B21891B51E4F7D6A00BD9AE7 /* SC_compress_52.png in Resources */,
 				B21891671E4F7D6A00BD9AE7 /* mengmengxiong_christmas_compress_13.png in Resources */,
 				B21892701E4F7D6A00BD9AE7 /* source_1_1.jpg in Resources */,
+				B267A9C91F32DF480003C0B9 /* Localizable.strings in Resources */,
 				B21890AA1E4F7D6A00BD9AE7 /* HK_compress_22.png in Resources */,
 				B21891E21E4F7D6A00BD9AE7 /* SC_compress_93.png in Resources */,
 				B21891E31E4F7D6A00BD9AE7 /* SC_compress_94.png in Resources */,
@@ -3616,7 +3616,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		8EDCB59876EC79FD52B7BD72 /* [CP] Embed Pods Frameworks */ = {
@@ -3659,7 +3659,6 @@
 				B2F9C2101E42249A00D2CC46 /* JFHomeViewController.swift in Sources */,
 				B2F9C20A1E421D1D00D2CC46 /* JFProgressHUD.swift in Sources */,
 				B2378C061E5C8AB500762CC5 /* JFPasterView.swift in Sources */,
-				B255C5DC1E49CCAF00AF3988 /* JFContextItem.swift in Sources */,
 				B28E96321E63D8F800E00078 /* CTImageSmearView.m in Sources */,
 				B23680271E4C311D00309D8B /* JFAlbumItemCollectionViewCell.swift in Sources */,
 				B28E96311E63D8F800E00078 /* CTImageSmearTop.m in Sources */,
@@ -3676,7 +3675,6 @@
 				B2B6D71B1E4A191900C6D6D4 /* JFPhotoPickerViewController.swift in Sources */,
 				B255C5D81E49909A00AF3988 /* JFDiyViewController.swift in Sources */,
 				B2B6D71F1E4A29E200C6D6D4 /* JFAlbumItem.swift in Sources */,
-				B255C5DD1E49CCAF00AF3988 /* JFContextSheet.swift in Sources */,
 				B2F9C20E1E4223A400D2CC46 /* ColorExtension.swift in Sources */,
 				B2F9C2061E421B5400D2CC46 /* JFCommon.swift in Sources */,
 				B2B7699D1E4DACAF0089F276 /* JFNewFeatureViewController.swift in Sources */,
@@ -3699,8 +3697,29 @@
 			isa = PBXVariantGroup;
 			children = (
 				B24BB3BB1E4198920024CBB2 /* Base */,
+				B267A9BF1F32D3D30003C0B9 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B267A9C41F32D4C60003C0B9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B267A9C31F32D4C60003C0B9 /* Base */,
+				B267A9C51F32D4CA0003C0B9 /* en */,
+				B267A9C61F32D4CB0003C0B9 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B267A9CB1F32DF480003C0B9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B267A9CA1F32DF480003C0B9 /* Base */,
+				B267A9CC1F32DF4A0003C0B9 /* en */,
+				B267A9CD1F32DF4B0003C0B9 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -3710,6 +3729,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -3759,6 +3779,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

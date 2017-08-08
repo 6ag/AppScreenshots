@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ContextSheet_Swift
 
 fileprivate let PasterGroupItemId = "PasterGroupItemId"
 fileprivate let PasterItemId = "PasterItemId"

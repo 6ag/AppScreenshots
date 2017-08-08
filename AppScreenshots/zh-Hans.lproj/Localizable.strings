@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  AppScreenshots
+
+  Created by zhoujianfeng on 2017/8/3.
+  Copyright © 2017年 zhoujianfeng. All rights reserved.
+*/
+
+"detail_photo" = "图片";
+"detail_templete" = "模板";
+"detail_resolution" = "分辨率";
+"detail_resolution_3_5_inch" = "3.5英寸(640*960)";
+"detail_resolution_4_0_inch" = "4.0英寸(640*1136)";
+"detail_resolution_4_7_inch" = "4.7英寸(750*1334)";
+"detail_resolution_5_5_inch" = "5.5英寸(1242*2208)";
+"detail_main_title" = "主标题";
+"detail_sub_title" = "副标题";
+"detail_preview" = "预览";
+
+"option_add_photo" = "添加图片";
+"option_remove_photo" = "移除当前";
+"option_emptied_photo" = "清空图片";
+"option_save_photo" = "保存图片";
+"option_diy_custom_made" = "DIY 定制";
+
+"tip_add_photo" = "请先添加图片";
+
+"option_save_photo_to_album" = "保存图片到相册";
+"option_current_photo" = "当前图片";
+"option_all_pictures" = "全部图片";
+"option_cancel" = "取消";
+
+"tip_save_success" = "保存成功";
+"tip_save_failure" = "保存失败";

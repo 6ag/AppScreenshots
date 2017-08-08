@@ -64,7 +64,7 @@ class JFAlbumItem: NSObject {
         for i in 0..<collection.count {
             // 获取出当前相簿内的图片
             let resultsOptions = PHFetchOptions()
-            resultsOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+            resultsOptions.sortDescriptors = [NSSortDescriptor(key: "modificationDate", ascending: false)]
             resultsOptions.predicate = NSPredicate(format: "mediaType = %d", PHAssetMediaType.image.rawValue)
             guard let c = collection[i] as? PHAssetCollection else { return albumItemList}
             let assetsFetchResult = PHAsset.fetchAssets(in: c, options: resultsOptions)

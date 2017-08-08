@@ -13,7 +13,7 @@ import pop
 ///
 /// - Parameter items: 需要打印的内容
 func log(_ items: Any?...) {
-    print(items)
+//    print(items)
 }
 
 struct Platform {

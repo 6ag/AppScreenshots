@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  AppScreenshots
+
+  Created by zhoujianfeng on 2017/8/3.
+  Copyright © 2017年 zhoujianfeng. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "Screenshot";

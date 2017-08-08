@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  AppScreenshots
+
+  Created by zhoujianfeng on 2017/8/3.
+  Copyright © 2017年 zhoujianfeng. All rights reserved.
+*/
+
+"detail_photo" = "PIC";
+"detail_templete" = "TMPL";
+"detail_resolution" = "RES";
+"detail_resolution_3_5_inch" = "3.5inch(640*960)";
+"detail_resolution_4_0_inch" = "4.0inch(640*1136)";
+"detail_resolution_4_7_inch" = "4.7inch(750*1334)";
+"detail_resolution_5_5_inch" = "5.5inch(1242*2208)";
+"detail_main_title" = "Main title";
+"detail_sub_title" = "Subtitle";
+"detail_preview" = "Preview";
+
+"option_add_photo" = "Add";
+"option_remove_photo" = "Remove";
+"option_emptied_photo" = "Emptied";
+"option_save_photo" = "Save";
+"option_diy_custom_made" = "DIY";
+
+"tip_add_photo" = "Please add the picture first";
+
+"option_save_photo_to_album" = "Save the picture to the album";
+"option_current_photo" = "Current picture";
+"option_all_pictures" = "All pictures";
+"option_cancel" = "Cancel";
+
+"tip_save_success" = "Save Success";
+"tip_save_failure" = "Save Failure";

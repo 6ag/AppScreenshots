@@ -68,7 +68,11 @@ class JFSettingViewController: UIViewController {
         
         FTPopOverMenu.showForSender(
             sender: moreButton,
-            with: ["添加图片", "移除当前", "清空图片", "保存图片", "DIY 定制"],
+            with: [NSLocalizedString("option_add_photo", comment: ""),
+                   NSLocalizedString("option_remove_photo", comment: ""),
+                   NSLocalizedString("option_emptied_photo", comment: ""),
+                   NSLocalizedString("option_save_photo", comment: ""),
+                   NSLocalizedString("option_diy_custom_made", comment: "")],
             menuImageArray: ["tianjiatupian", "yichuquanbu", "yichudangqian", "baocuntupian",  "diy"],
             done: { [weak self] (selectedIndex) -> () in
                 switch selectedIndex {
@@ -128,7 +132,7 @@ class JFSettingViewController: UIViewController {
         view.endEditing(true)
         
         if photoMaterialParameterList.count == 0 {
-            JFProgressHUD.showInfoWithStatus("请先添加图片")
+            JFProgressHUD.showInfoWithStatus(NSLocalizedString("tip_add_photo", comment: ""))
             return
         }
         
@@ -179,7 +183,7 @@ class JFSettingViewController: UIViewController {
         view.layer.cornerRadius = 5
         
         let label = UILabel()
-        label.text = "图片"
+        label.text = NSLocalizedString("detail_photo", comment: "")
         label.font = UIFont.systemFont(ofSize: layoutFont(iPhone6: 16))
         label.textColor = UIColor.colorWithHexString("b4b7bb")
         
@@ -219,7 +223,7 @@ class JFSettingViewController: UIViewController {
         view.layer.cornerRadius = 5
         
         let label = UILabel()
-        label.text = "模板"
+        label.text = NSLocalizedString("detail_templete", comment: "")
         label.font = UIFont.systemFont(ofSize: layoutFont(iPhone6: 16))
         label.textColor = UIColor.colorWithHexString("b4b7bb")
         
@@ -259,7 +263,7 @@ class JFSettingViewController: UIViewController {
         view.layer.cornerRadius = 5
         
         let label = UILabel()
-        label.text = "分辨率"
+        label.text = NSLocalizedString("detail_resolution", comment: "")
         label.font = UIFont.systemFont(ofSize: layoutFont(iPhone6: 16))
         label.textColor = UIColor.colorWithHexString("b4b7bb")
         
@@ -270,7 +274,7 @@ class JFSettingViewController: UIViewController {
         button1.titleLabel?.font = UIFont.systemFont(ofSize: layoutFont(iPhone6: 16))
         button1.setImage(UIImage(named: "size_weixuanzhong"), for: .normal)
         button1.setImage(UIImage(named: "size_selected"), for: .selected)
-        button1.setTitle("3.5英寸(640*960)", for: .normal)
+        button1.setTitle(NSLocalizedString("detail_resolution_3_5_inch", comment: ""), for: .normal)
         button1.addTarget(self, action: #selector(didTapped(button:)), for: .touchUpInside)
         
         let button2 = UIButton(type: .custom)
@@ -280,7 +284,7 @@ class JFSettingViewController: UIViewController {
         button2.titleLabel?.font = UIFont.systemFont(ofSize: layoutFont(iPhone6: 16))
         button2.setImage(UIImage(named: "size_weixuanzhong"), for: .normal)
         button2.setImage(UIImage(named: "size_selected"), for: .selected)
-        button2.setTitle("4.0英寸(640*1136)", for: .normal)
+        button2.setTitle(NSLocalizedString("detail_resolution_4_0_inch", comment: ""), for: .normal)
         button2.addTarget(self, action: #selector(didTapped(button:)), for: .touchUpInside)
         
         let button3 = UIButton(type: .custom)
@@ -290,7 +294,7 @@ class JFSettingViewController: UIViewController {
         button3.titleLabel?.font = UIFont.systemFont(ofSize: layoutFont(iPhone6: 16))
         button3.setImage(UIImage(named: "size_weixuanzhong"), for: .normal)
         button3.setImage(UIImage(named: "size_selected"), for: .selected)
-        button3.setTitle("4.7英寸(750*1334)", for: .normal)
+        button3.setTitle(NSLocalizedString("detail_resolution_4_7_inch", comment: ""), for: .normal)
         button3.addTarget(self, action: #selector(didTapped(button:)), for: .touchUpInside)
         
         let button4 = UIButton(type: .custom)
@@ -300,7 +304,7 @@ class JFSettingViewController: UIViewController {
         button4.titleLabel?.font = UIFont.systemFont(ofSize: layoutFont(iPhone6: 16))
         button4.setImage(UIImage(named: "size_weixuanzhong"), for: .normal)
         button4.setImage(UIImage(named: "size_selected"), for: .selected)
-        button4.setTitle("5.5英寸(1242*2208)", for: .normal)
+        button4.setTitle(NSLocalizedString("detail_resolution_5_5_inch", comment: ""), for: .normal)
         button4.addTarget(self, action: #selector(didTapped(button:)), for: .touchUpInside)
         
         // 默认选中4.7寸
@@ -379,7 +383,7 @@ class JFSettingViewController: UIViewController {
         textField.font = UIFont.systemFont(ofSize: layoutFont(iPhone6: 16))
         textField.textAlignment = .center
         textField.textColor = UIColor.colorWithHexString("d3d3d3")
-        textField.attributedPlaceholder = NSAttributedString(string: "主标题", attributes: [NSForegroundColorAttributeName : UIColor.colorWithHexString("808080")])
+        textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("detail_main_title", comment: ""), attributes: [NSForegroundColorAttributeName : UIColor.colorWithHexString("808080")])
         textField.addTarget(self, action: #selector(textFieldChanged(textField:)), for: .editingChanged)
         return textField
     }()
@@ -419,7 +423,7 @@ class JFSettingViewController: UIViewController {
         textField.font = UIFont.systemFont(ofSize: layoutFont(iPhone6: 16))
         textField.textAlignment = .center
         textField.textColor = UIColor.colorWithHexString("d3d3d3")
-        textField.attributedPlaceholder = NSAttributedString(string: "副标题", attributes: [NSForegroundColorAttributeName : UIColor.colorWithHexString("808080")])
+        textField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("detail_sub_title", comment: ""), attributes: [NSForegroundColorAttributeName : UIColor.colorWithHexString("808080")])
         textField.addTarget(self, action: #selector(textFieldChanged(textField:)), for: .editingChanged)
         return textField
     }()
@@ -427,7 +431,7 @@ class JFSettingViewController: UIViewController {
     /// 预览
     fileprivate lazy var previewButton: UIButton = {
         let button = UIButton(type: .custom)
-        button.setTitle("预览", for: .normal)
+        button.setTitle(NSLocalizedString("detail_preview", comment: ""), for: .normal)
         button.setTitleColor(UIColor.colorWithHexString("333333"), for: .normal)
         button.setBackgroundImage(
             UIColor
@@ -576,7 +580,7 @@ extension JFSettingViewController {
         }
         
         if photoMaterialParameterList.count == 0 {
-            JFProgressHUD.showInfoWithStatus("请先添加图片")
+            JFProgressHUD.showInfoWithStatus(NSLocalizedString("tip_add_photo", comment: ""))
             return
         }
         
@@ -605,7 +609,7 @@ extension JFSettingViewController {
         }
         
         if photoMaterialParameterList.count == 0 {
-            JFProgressHUD.showInfoWithStatus("请先添加图片")
+            JFProgressHUD.showInfoWithStatus(NSLocalizedString("tip_add_photo", comment: ""))
             return
         }
         
@@ -640,7 +644,7 @@ extension JFSettingViewController {
         }
         
         if photoMaterialParameterList.count == 0 {
-            JFProgressHUD.showInfoWithStatus("请先添加图片")
+            JFProgressHUD.showInfoWithStatus(NSLocalizedString("tip_add_photo", comment: ""))
             return
         }
         
@@ -669,18 +673,18 @@ extension JFSettingViewController {
         }
         
         if photoMaterialParameterList.count == 0 {
-            JFProgressHUD.showInfoWithStatus("请先添加图片")
+            JFProgressHUD.showInfoWithStatus(NSLocalizedString("tip_add_photo", comment: ""))
             return
         }
         
-        let alertC = UIAlertController(title: "保存图片到相册", message: nil, preferredStyle: .actionSheet)
-        alertC.addAction(UIAlertAction(title: "当前图片", style: .default, handler: { [weak self] (_) in
+        let alertC = UIAlertController(title: NSLocalizedString("option_save_photo_to_album", comment: ""), message: nil, preferredStyle: .actionSheet)
+        alertC.addAction(UIAlertAction(title: NSLocalizedString("option_current_photo", comment: ""), style: .default, handler: { [weak self] (_) in
             self?.saveOnImage()
         }))
-        alertC.addAction(UIAlertAction(title: "全部图片", style: .default, handler: { [weak self] (_) in
+        alertC.addAction(UIAlertAction(title: NSLocalizedString("option_all_pictures", comment: ""), style: .default, handler: { [weak self] (_) in
             self?.saveMoreImage()
         }))
-        alertC.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
+        alertC.addAction(UIAlertAction(title: NSLocalizedString("option_cancel", comment: ""), style: .cancel, handler: nil))
         present(alertC, animated: true, completion: nil)
     }
     
@@ -716,9 +720,9 @@ extension JFSettingViewController {
     /// 图片保存回调
     @objc fileprivate func imageSavedToPhotosAlbum(image: UIImage, didFinishSavingWithError error: Error?, contextInfo: Any?) {
         if error == nil {
-            JFProgressHUD.showSuccessWithStatus("保存成功")
+            JFProgressHUD.showSuccessWithStatus(NSLocalizedString("tip_save_success", comment: ""))
         } else {
-            JFProgressHUD.showErrorWithStatus("保存失败 \(error.debugDescription)")
+            JFProgressHUD.showErrorWithStatus("\(NSLocalizedString("tip_save_failure", comment: "")) \(error.debugDescription)")
         }
     }
     
@@ -957,7 +961,7 @@ extension JFSettingViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         
         if photoMaterialParameterList.count == 0 {
-            JFProgressHUD.showInfoWithStatus("请先添加图片")
+            JFProgressHUD.showInfoWithStatus(NSLocalizedString("tip_add_photo", comment: ""))
             view.endEditing(true)
             return false
         }

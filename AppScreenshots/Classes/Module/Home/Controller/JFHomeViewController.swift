@@ -20,6 +20,7 @@ class JFHomeViewController: UIViewController {
         super.viewDidLoad()
         
         prepareUI()
+        
     }
     
     // MARK: - 懒加载UI

@@ -19,6 +19,8 @@ pod 'IQKeyboardManagerSwift'
 pod 'Alamofire', '~> 4.0'
 # 谷歌联盟广告
 pod 'Firebase/AdMob'
+# 弹出框
+pod 'ContextSheet-Swift'
 
 # 友盟统计标准SDK，含IDFA
 pod 'UMengAnalytics'
