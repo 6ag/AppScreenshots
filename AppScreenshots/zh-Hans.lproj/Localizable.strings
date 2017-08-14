@@ -47,3 +47,5 @@
 "diy_item_katie" = "贴纸";
 "diy_item_smear" = "打码";
 "diy_item_save" = "保存";
+
+"photo_suffix" = "jpg";

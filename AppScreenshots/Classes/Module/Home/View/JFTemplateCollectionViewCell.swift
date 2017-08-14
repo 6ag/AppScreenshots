@@ -13,12 +13,8 @@ class JFTemplateCollectionViewCell: UICollectionViewCell {
     var materialParameter: JFMaterialParameter? {
         didSet {
             guard let materialParameter = materialParameter else { return }
-            var imageName = ""
-            if isChineseEnv() {
-                imageName = materialParameter.showImageName ?? ""
-            } else {
-                imageName = materialParameter.showImageName?.replacingOccurrences(of: "jpg", with: "png") ?? ""
-            }
+            var imageName = materialParameter.showImageName?.replacingOccurrences(of: "jpg", with: "") ?? ""
+            imageName += NSLocalizedString("photo_suffix", comment: "")
             imageView.image = UIImage(contentsOfFile: Bundle.main.path(forResource: imageName, ofType: nil) ?? "")
             selectedIconView.isHidden = !materialParameter.isSelected
         }

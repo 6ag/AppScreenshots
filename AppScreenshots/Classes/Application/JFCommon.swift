@@ -10,22 +10,10 @@ import UIKit
 import pop
 
 /// 打印日志封装 - 打包的时候注释掉
-///
+///·
 /// - Parameter items: 需要打印的内容
 func log(_ items: Any?...) {
     print(items)
-}
-
-/// 是否是中文环境
-///
-/// - Returns: true是中文环境
-func isChineseEnv() -> Bool {
-    if let currentLanguage = UserDefaults.standard.stringArray(forKey: "AppleLanguages")?.first {
-        if currentLanguage.contains("zh-Hans") {
-            return true
-        }
-    }
-    return false
 }
 
 struct Platform {

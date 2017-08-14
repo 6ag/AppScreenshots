@@ -748,13 +748,13 @@ extension JFSettingViewController {
                 let button = subview as! UIButton
                 if button.isSelected {
                     switch button.title(for: .normal) ?? "" {
-                    case "3.5英寸(640*960)": // 3.5 - 640*960
+                    case NSLocalizedString("detail_resolution_3_5_inch", comment: ""): // 3.5 - 640*960
                         size = CGSize(width: 640, height: 960)
-                    case "4.0英寸(640*1136)": // 4.0 - 640*1136
+                    case NSLocalizedString("detail_resolution_4_0_inch", comment: ""): // 4.0 - 640*1136
                         size = CGSize(width: 640, height: 1136)
-                    case "4.7英寸(750*1334)": // 4.7 - 750*1334
+                    case NSLocalizedString("detail_resolution_4_7_inch", comment: ""): // 4.7 - 750*1334
                         size = CGSize(width: 750, height: 1334)
-                    case "5.5英寸(1242*2208)": // 5.5 - 1242*2208
+                    case NSLocalizedString("detail_resolution_5_5_inch", comment: ""): // 5.5 - 1242*2208
                         size = CGSize(width: 1242, height: 2208)
                     default:
                         break

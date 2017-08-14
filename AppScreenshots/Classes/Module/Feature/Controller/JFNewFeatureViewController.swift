@@ -110,7 +110,7 @@ extension JFNewFeatureViewController {
         view.addSubview(pageControl)
         
         for index in 1...count {
-            let image = UIImage(contentsOfFile: Bundle.main.path(forResource: "feature_\(index).jpg", ofType: nil)!)
+            let image = UIImage(contentsOfFile: Bundle.main.path(forResource: "feature_\(index).jpg)", ofType: nil)!)
             let imageView = UIImageView(image: image)
             imageView.backgroundColor = UIColor.red
             imageView.frame = CGRect(x: CGFloat(index - 1) * SCREEN_WIDTH, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT)

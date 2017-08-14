@@ -177,6 +177,7 @@ class JFPhotoPickerViewController: UIViewController {
     fileprivate lazy var cancelButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setTitle(NSLocalizedString("option_cancel", comment: ""), for: .normal)
+        button.titleLabel?.textAlignment = NSTextAlignment.left
         button.titleLabel?.font = UIFont.systemFont(ofSize: layoutFont(iPhone6: 14))
         button.addTarget(self, action: #selector(didTapped(cancelButton:)), for: .touchUpInside)
         return button
@@ -186,6 +187,7 @@ class JFPhotoPickerViewController: UIViewController {
     fileprivate lazy var confirmButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setTitle(NSLocalizedString("option_confirm", comment: ""), for: .normal)
+        button.titleLabel?.textAlignment = NSTextAlignment.right
         button.isEnabled = false
         button.setTitleColor(UIColor.white, for: .normal)
         button.setTitleColor(UIColor.gray, for: .disabled)
@@ -244,13 +246,13 @@ extension JFPhotoPickerViewController {
         cancelButton.snp.makeConstraints { (make) in
             make.top.equalTo(20)
             make.left.equalTo(layoutHorizontal(iPhone6: 5))
-            make.size.equalTo(CGSize(width: layoutHorizontal(iPhone6: 44), height: layoutVertical(iPhone6: 44)))
+            make.height.equalTo(layoutVertical(iPhone6: 44))
         }
         
         confirmButton.snp.makeConstraints { (make) in
             make.top.equalTo(20)
             make.right.equalTo(layoutHorizontal(iPhone6: -5))
-            make.size.equalTo(CGSize(width: layoutHorizontal(iPhone6: 44), height: layoutVertical(iPhone6: 44)))
+            make.height.equalTo(layoutVertical(iPhone6: 44))
         }
         
         titleButton.snp.makeConstraints { (make) in
