@@ -7,7 +7,7 @@
 */
 
 "detail_photo" = "PIC";
-"detail_templete" = "TMPL";
+"detail_templete" = "TML";
 "detail_resolution" = "RES";
 "detail_resolution_3_5_inch" = "3.5inch(640*960)";
 "detail_resolution_4_0_inch" = "4.0inch(640*1136)";
@@ -29,6 +29,21 @@
 "option_current_photo" = "Current picture";
 "option_all_pictures" = "All pictures";
 "option_cancel" = "Cancel";
+"option_confirm" = "Confirm";
+"option_setting" = "Setting";
+"option_utilize" = "Utilize";
+"option_drop_out" = "Drop Out";
 
 "tip_save_success" = "Save Success";
 "tip_save_failure" = "Save Failure";
+"tip_album_authorization_title" = "Authorization is rejected by the user";
+"tip_album_authorization_content" = "Can not load your album. If you want to use this feature, please modify the album permissions settings, allow access to photos";
+"tip_album_limit5" = "Suggested application of up to 5 screenshots";
+"tip_ask_back_title" = "Are you sure you want to quit?";
+"tip_ask_back_content" = "After all the DIY operation will be emptied Oh! O (∩ _ ∩) O ~";
+
+"diy_item_fanhuijiantou" = "Back";
+"diy_item_tupian" = "Original";
+"diy_item_katie" = "Stickers";
+"diy_item_smear" = "Mosaic";
+"diy_item_save" = "Save";

@@ -22,12 +22,22 @@ class JFHomeCollectionViewCell: UICollectionViewCell {
     var material: JFMaterial? {
         didSet {
             guard let material = material else { return }
-            imageView.image = UIImage(named: material.listImageName ?? "")?.redrawRoundedImage(size: CGSize(width: HomeItemWidth, height: HomeItemHeight), bgColor: BACKGROUND_COLOR, cornerRadius: 10)
-            
-            if material.commendType == 0 {
-                typeIconView.image = UIImage(named: "home_latest")
+            if isChineseEnv() {
+                imageView.image = UIImage(contentsOfFile: Bundle.main.path(forResource: "\(material.listImageName ?? "")_1.jpg", ofType: nil) ?? "")
+                    // ?.redrawRoundedImage(size: CGSize(width: HomeItemWidth, height: HomeItemHeight), bgColor: BACKGROUND_COLOR, cornerRadius: 10)
+                if material.commendType == 0 {
+                    typeIconView.image = UIImage(named: "home_latest")
+                } else {
+                    typeIconView.image = UIImage(named: "home_hot")
+                }
             } else {
-                typeIconView.image = UIImage(named: "home_hot")
+                imageView.image = UIImage(contentsOfFile: Bundle.main.path(forResource: "\(material.listImageName ?? "")_1.png", ofType: nil) ?? "")
+                    // ?.redrawRoundedImage(size: CGSize(width: HomeItemWidth, height: HomeItemHeight), bgColor: BACKGROUND_COLOR, cornerRadius: 10)
+                if material.commendType == 0 {
+                    typeIconView.image = UIImage(named: "home_latest_en")
+                } else {
+                    typeIconView.image = UIImage(named: "home_hot_en")
+                }
             }
             
         }

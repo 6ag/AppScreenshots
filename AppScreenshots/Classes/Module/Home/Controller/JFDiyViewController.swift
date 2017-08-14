@@ -87,11 +87,12 @@ class JFDiyViewController: UIViewController {
     
     /// 触摸屏幕后弹出视图
     fileprivate lazy var contextSheet: JFContextSheet = {
-        let contextItem1 = JFContextItem(itemName: "返回", itemIcon: "diy_item_fanhuijiantou")
-        let contextItem2 = JFContextItem(itemName: "原图", itemIcon: "diy_item_tupian")
-        let contextItem3 = JFContextItem(itemName: "贴纸", itemIcon: "diy_item_katie")
-        let contextItem4 = JFContextItem(itemName: "打码", itemIcon: "diy_item_smear")
-        let contextItem5 = JFContextItem(itemName: "保存", itemIcon: "diy_item_save")
+        
+        let contextItem1 = JFContextItem(itemName: NSLocalizedString("diy_item_fanhuijiantou", comment: ""), itemIcon: "diy_item_fanhuijiantou")
+        let contextItem2 = JFContextItem(itemName: NSLocalizedString("diy_item_tupian", comment: ""), itemIcon: "diy_item_tupian")
+        let contextItem3 = JFContextItem(itemName: NSLocalizedString("diy_item_katie", comment: ""), itemIcon: "diy_item_katie")
+        let contextItem4 = JFContextItem(itemName: NSLocalizedString("diy_item_smear", comment: ""), itemIcon: "diy_item_smear")
+        let contextItem5 = JFContextItem(itemName: NSLocalizedString("diy_item_save", comment: ""), itemIcon: "diy_item_save")
         
         let contextSheet = JFContextSheet(items: [contextItem1, contextItem2, contextItem3, contextItem4, contextItem5])
         contextSheet.delegate = self
@@ -139,13 +140,13 @@ class JFDiyViewController: UIViewController {
         let cancelButton = UIButton(type: .custom)
         cancelButton.setTitleColor(UIColor.white, for: .normal)
         cancelButton.titleLabel?.font = UIFont.systemFont(ofSize: layoutFont(iPhone6: 14))
-        cancelButton.setTitle("取消", for: .normal)
+        cancelButton.setTitle(NSLocalizedString("option_cancel", comment: ""), for: .normal)
         cancelButton.addTarget(self, action: #selector(didTappedPasterTopView(cancelButton:)), for: .touchUpInside)
         
         let confirmButton = UIButton(type: .custom)
         confirmButton.setTitleColor(UIColor.white, for: .normal)
         confirmButton.titleLabel?.font = UIFont.systemFont(ofSize: layoutFont(iPhone6: 14))
-        confirmButton.setTitle("应用", for: .normal)
+        confirmButton.setTitle(NSLocalizedString("option_utilize", comment: ""), for: .normal)
         confirmButton.addTarget(self, action: #selector(didTappedPasterTopView(confirmButton:)), for: .touchUpInside)
         
         view.addSubview(cancelButton)
@@ -392,26 +393,26 @@ extension JFDiyViewController: JFContextSheetDelegate {
     // MARK: - JFContextSheetDelegate
     func contextSheet(_ contextSheet: JFContextSheet, didSelectItemWithItemName itemName: String) {
         switch (itemName) {
-        case "返回":
+        case NSLocalizedString("diy_item_fanhuijiantou", comment: ""):
             exitDiy()
-        case "原图":
+        case NSLocalizedString("diy_item_tupian", comment: ""):
             originImage()
-        case "贴纸":
+        case NSLocalizedString("diy_item_katie", comment: ""):
             paster()
-        case "打码":
+        case NSLocalizedString("diy_item_smear", comment: ""):
             gaussianblur()
-        case "保存":
+        case NSLocalizedString("diy_item_save", comment: ""):
             save()
         default:
             break
         }
     }
-    
+
     /// 退出DIY
     fileprivate func exitDiy() {
-        let alertC = UIAlertController(title: "确定要退出吗？", message: "退出后所有DIY的操作都会清空哦！O(∩_∩)O~", preferredStyle: .alert)
-        alertC.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
-        alertC.addAction(UIAlertAction(title: "退出", style: .destructive, handler: { (_) in
+        let alertC = UIAlertController(title: NSLocalizedString("tip_ask_back_title", comment: ""), message: NSLocalizedString("tip_ask_back_content", comment: ""), preferredStyle: .alert)
+        alertC.addAction(UIAlertAction(title: NSLocalizedString("option_cancel", comment: ""), style: .cancel, handler: nil))
+        alertC.addAction(UIAlertAction(title: NSLocalizedString("option_drop_out", comment: ""), style: .destructive, handler: { (_) in
             self.dismiss(animated: true, completion: nil)
         }))
         present(alertC, animated: true, completion: nil)
@@ -463,14 +464,14 @@ extension JFDiyViewController: JFContextSheetDelegate {
             return
         }
         
-        let alertC = UIAlertController(title: "保存图片到相册", message: nil, preferredStyle: .actionSheet)
-        alertC.addAction(UIAlertAction(title: "当前图片", style: .default, handler: { [weak self] (_) in
+        let alertC = UIAlertController(title: NSLocalizedString("option_save_photo_to_album", comment: ""), message: nil, preferredStyle: .actionSheet)
+        alertC.addAction(UIAlertAction(title: NSLocalizedString("option_current_photo", comment: ""), style: .default, handler: { [weak self] (_) in
             self?.saveOnImage()
         }))
-        alertC.addAction(UIAlertAction(title: "全部图片", style: .default, handler: { [weak self] (_) in
+        alertC.addAction(UIAlertAction(title: NSLocalizedString("option_all_pictures", comment: ""), style: .default, handler: { [weak self] (_) in
             self?.saveMoreImage()
         }))
-        alertC.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
+        alertC.addAction(UIAlertAction(title: NSLocalizedString("option_cancel", comment: ""), style: .cancel, handler: nil))
         present(alertC, animated: true, completion: nil)
     }
     
@@ -493,9 +494,9 @@ extension JFDiyViewController: JFContextSheetDelegate {
     /// 图片保存回调
     @objc fileprivate func imageSavedToPhotosAlbum(image: UIImage, didFinishSavingWithError error: Error?, contextInfo: Any?) {
         if error == nil {
-            JFProgressHUD.showSuccessWithStatus("保存成功")
+            JFProgressHUD.showSuccessWithStatus(NSLocalizedString("tip_save_success", comment: ""))
         } else {
-            JFProgressHUD.showErrorWithStatus("保存失败 \(error.debugDescription)")
+            JFProgressHUD.showErrorWithStatus("\(NSLocalizedString("tip_save_failure", comment: "")) \(error.debugDescription)")
         }
     }
     

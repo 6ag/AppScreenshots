@@ -106,7 +106,7 @@ class JFPhotoPickerViewController: UIViewController {
         present(albumListVc, animated: true, completion: nil)
         
         UIView.animate(withDuration: 0.25) {
-            self.titleButton.imageView?.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI))
+            self.titleButton.imageView?.transform = CGAffineTransform(rotationAngle: .pi)
         }
     }
 
@@ -176,7 +176,7 @@ class JFPhotoPickerViewController: UIViewController {
     /// 取消
     fileprivate lazy var cancelButton: UIButton = {
         let button = UIButton(type: .custom)
-        button.setTitle("取消", for: .normal)
+        button.setTitle(NSLocalizedString("option_cancel", comment: ""), for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: layoutFont(iPhone6: 14))
         button.addTarget(self, action: #selector(didTapped(cancelButton:)), for: .touchUpInside)
         return button
@@ -185,7 +185,7 @@ class JFPhotoPickerViewController: UIViewController {
     /// 确定
     fileprivate lazy var confirmButton: UIButton = {
         let button = UIButton(type: .custom)
-        button.setTitle("确定", for: .normal)
+        button.setTitle(NSLocalizedString("option_confirm", comment: ""), for: .normal)
         button.isEnabled = false
         button.setTitleColor(UIColor.white, for: .normal)
         button.setTitleColor(UIColor.gray, for: .disabled)
@@ -312,11 +312,11 @@ extension JFPhotoPickerViewController {
     /// 显示授权拒绝提示信息并引导用户去设置
     fileprivate func showAuthorizationDeniedTip() {
         
-        let alertC = UIAlertController(title: "授权被用户拒绝", message: "无法加载您的相册，如果您想使用这个功能，请在【设置】-【ScreenShot】，允许访问照片", preferredStyle: .alert)
-        alertC.addAction(UIAlertAction(title: "取消", style: .cancel, handler:  { (_) in
+        let alertC = UIAlertController(title: NSLocalizedString("tip_album_authorization_title", comment: ""), message: NSLocalizedString("tip_album_authorization_content", comment: ""), preferredStyle: .alert)
+        alertC.addAction(UIAlertAction(title: NSLocalizedString("option_cancel", comment: ""), style: .cancel, handler:  { (_) in
             self.dismiss(animated: true, completion: nil)
         }))
-        alertC.addAction(UIAlertAction(title: "设置", style: .destructive, handler: { (_) in
+        alertC.addAction(UIAlertAction(title: NSLocalizedString("option_setting", comment: ""), style: .destructive, handler: { (_) in
             // 打开设置界面
             if let url = URL(string: UIApplicationOpenSettingsURLString), UIApplication.shared.canOpenURL(url) {
                 self.dismiss(animated: false, completion: nil)
@@ -351,7 +351,7 @@ extension JFPhotoPickerViewController: UICollectionViewDelegate, UICollectionVie
             countLabel.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: layoutVertical(iPhone6: 44))
             footView.addSubview(countLabel)
         }
-        (footView.subviews[0] as! UILabel).text = "\(currentAssetItemList.count)张图片"
+        (footView.subviews[0] as! UILabel).text = "\(currentAssetItemList.count) pictures"
         return footView
     }
     
@@ -371,7 +371,7 @@ extension JFPhotoPickerViewController: UICollectionViewDelegate, UICollectionVie
                 startViewSpringAnimation(cell.selectedButton)
             }
         } else {
-            JFProgressHUD.showInfoWithStatus("建议应用截图最多5张")
+            JFProgressHUD.showInfoWithStatus(NSLocalizedString("tip_album_limit5", comment: ""))
         }
         
         // 每次选择图片后都判断是否需要激活确认按钮

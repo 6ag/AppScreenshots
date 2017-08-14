@@ -111,7 +111,11 @@ extension JFHomeViewController: UICollectionViewDelegate, UICollectionViewDataSo
         
         let material = materialList[indexPath.item]
         let tempImageView = UIImageView()
-        tempImageView.image = UIImage(named: material.listImageName ?? "")
+        if isChineseEnv() {
+            tempImageView.image = UIImage(contentsOfFile: Bundle.main.path(forResource: "\(material.listImageName ?? "")_1.jpg", ofType: nil) ?? "")
+        } else {
+            tempImageView.image = UIImage(contentsOfFile: Bundle.main.path(forResource: "\(material.listImageName ?? "")_1.png", ofType: nil) ?? "")
+        }
         tempImageView.frame = CGRect(x: x, y: y, width: width, height: height)
         
         UIApplication.shared.keyWindow?.addSubview(tempImageView)

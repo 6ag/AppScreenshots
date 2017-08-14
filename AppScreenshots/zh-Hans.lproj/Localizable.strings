@@ -29,6 +29,21 @@
 "option_current_photo" = "当前图片";
 "option_all_pictures" = "全部图片";
 "option_cancel" = "取消";
+"option_confirm" = "确定";
+"option_setting" = "设置";
+"option_utilize" = "应用";
+"option_drop_out" = "退出";
 
 "tip_save_success" = "保存成功";
 "tip_save_failure" = "保存失败";
+"tip_album_authorization_title" = "授权被用户拒绝";
+"tip_album_authorization_content" = "无法加载您的相册。如果要使用此功能，请修改相册权限设置，允许访问照片";
+"tip_album_limit5" = "建议应用截图最多5张";
+"tip_ask_back_title" = "确定要退出吗？";
+"tip_ask_back_content" = "退出后所有DIY的操作都会清空哦！O(∩_∩)O~";
+
+"diy_item_fanhuijiantou" = "返回";
+"diy_item_tupian" = "原图";
+"diy_item_katie" = "贴纸";
+"diy_item_smear" = "打码";
+"diy_item_save" = "保存";
