@@ -122,16 +122,22 @@ class JFPhotoPickerViewController: UIViewController {
     /// - Parameter confirmButton: 确认按钮
     @objc fileprivate func didTapped(confirmButton: UIButton) {
         
+        JFProgressHUD.showWithStatus("压缩图片")
         let group = DispatchGroup()
         var assetItemList = [UIImage]()
         for assetItem in currentAssetItemList {
             if assetItem.isSelected {
                 group.enter()
+                let options = PHImageRequestOptions()
+                options.isSynchronous = false
+                options.deliveryMode = .opportunistic
+                options.resizeMode = .fast
+                options.isNetworkAccessAllowed = true
                 PHCachingImageManager.default().requestImage(
                     for: assetItem.asset,
                     targetSize: PHImageManagerMaximumSize,
                     contentMode: .aspectFill,
-                    options: nil) { (image, info) in
+                    options: options) { (image, info) in
                         if let image = image {
                             assetItemList.append(image)
                         }
@@ -142,7 +148,8 @@ class JFPhotoPickerViewController: UIViewController {
         
         // 因为这里是异步，所以得用调度组来控制数据加载完毕
         group.notify(queue: DispatchQueue.main) { [weak self] in
-            self?.dismiss(animated: true, completion: { 
+            self?.dismiss(animated: true, completion: {
+                JFProgressHUD.dismiss()
                 self?.delegate?.didSelected(imageList: assetItemList)
             })
         }

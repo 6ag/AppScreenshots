@@ -116,12 +116,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      */
     fileprivate func setupRootViewController() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        if isNewVersion() {
-            window?.rootViewController = JFNewFeatureViewController()
-        } else {
+//        if isNewVersion() {
+//            window?.rootViewController = JFNewFeatureViewController()
+//        } else {
             window?.rootViewController = JFHomeViewController()
             setupGlobalStyle()
-        }
+//        }
         window?.makeKeyAndVisible()
     }
     
