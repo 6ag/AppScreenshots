@@ -124,21 +124,15 @@ class JFAdManager: NSObject {
                     messageObject.shareObject = shareObject
                     
                     UMSocialManager.default().share(to: platformType, messageObject: messageObject, currentViewController: vc) { (data, error) in
-                        if error == nil {
-                            JFProgressHUD.showSuccessWithStatus("分享成功，谢谢支持")
-                            UserDefaults.standard.set(true, forKey: "isShouldSave")
-                            
-                            // 设置隐藏广告时间
-                            let currentDateString = JFAdManager.shared.dateFormatter.string(from: Date())
-                            log("从currentDateString = \(currentDateString)起，2天内无广告")
-                            UserDefaults.standard.set(currentDateString, forKey: "removeAdAtTime")
-                            UserDefaults.standard.synchronize()
-                            JFAdManager.shared.updateSharedHideAd()
-                            
-                        } else {
-                            JFProgressHUD.showSuccessWithStatus("分享失败，请换一个平台分享")
-                            UserDefaults.standard.set(false, forKey: "isShouldSave")
-                        }
+                        JFProgressHUD.showSuccessWithStatus("不管有没有分享成功，谢谢支持")
+                        UserDefaults.standard.set(true, forKey: "isShouldSave")
+                        
+                        // 设置隐藏广告时间
+                        let currentDateString = JFAdManager.shared.dateFormatter.string(from: Date())
+                        log("从currentDateString = \(currentDateString)起，2天内无广告")
+                        UserDefaults.standard.set(currentDateString, forKey: "removeAdAtTime")
+                        UserDefaults.standard.synchronize()
+                        JFAdManager.shared.updateSharedHideAd()
                     }
                 }
             }))
