@@ -181,7 +181,7 @@ class JFMaterial: NSObject {
     class func getMaterialList() -> [JFMaterial] {
         
         let data = NSData(contentsOfFile: Bundle.main.path(forResource: "material", ofType: "json")!)!
-        let materialArray = try! JSONSerialization.jsonObject(with: data as Data, options: .allowFragments) as! [[String : Any]]
+        let materialArray = try! JSONSerialization.jsonObject(with: data as Data, options: .mutableLeaves) as! [[String : Any]]
         
         var materialList = [JFMaterial]()
         
