@@ -30,43 +30,43 @@ class JFPhotoCollectionViewCell: UICollectionViewCell {
             
             // 标题
             titleLabel.text = materialParameter.title
-            titleLabel.font = UIFont(name: "PingFangSC-Semibold", size: SettingPhotoItemHeight / SCREEN_HEIGHT * layoutVertical(iPhone6: materialParameter.titleFontSize))
+            titleLabel.font = UIFont(name: "PingFangSC-Semibold", size: SettingPhotoItemHeight / SCREEN_HEIGHT * layoutVerticalX(iPhone6: materialParameter.titleFontSize))
             titleLabel.textColor = UIColor.colorWithHexString(materialParameter.titleTextColorHex ?? "")
             
             // 副标题
             subtitleLabel.text = materialParameter.subtitle
-            subtitleLabel.font = UIFont(name: "PingFangSC-Semibold", size: SettingPhotoItemHeight / SCREEN_HEIGHT * layoutVertical(iPhone6: materialParameter.subtitleFontSize))
+            subtitleLabel.font = UIFont(name: "PingFangSC-Semibold", size: SettingPhotoItemHeight / SCREEN_HEIGHT * layoutVerticalX(iPhone6: materialParameter.subtitleFontSize))
             subtitleLabel.textColor = UIColor.colorWithHexString(materialParameter.subtitleTextColorHex ?? "")
             
             titleLabel.snp.updateConstraints { (make) in
                 make.centerX.equalTo(contentView)
-                make.top.equalTo(SettingPhotoItemHeight / SCREEN_HEIGHT * layoutVertical(iPhone6: materialParameter.titleY))
+                make.top.equalTo(SettingPhotoItemHeight / SCREEN_HEIGHT * layoutVerticalX(iPhone6: materialParameter.titleY))
             }
             
             subtitleLabel.snp.updateConstraints { (make) in
                 make.centerX.equalTo(contentView)
-                make.top.equalTo(SettingPhotoItemHeight / SCREEN_HEIGHT * layoutVertical(iPhone6: materialParameter.subtitleY))
+                make.top.equalTo(SettingPhotoItemHeight / SCREEN_HEIGHT * layoutVerticalX(iPhone6: materialParameter.subtitleY))
             }
             
             screenShotImageView.snp.updateConstraints { (make) in
                 make.left.equalTo(SettingPhotoItemWidth / SCREEN_WIDTH * layoutHorizontal(iPhone6: materialParameter.screenShotX))
-                make.top.equalTo(SettingPhotoItemHeight / SCREEN_HEIGHT * layoutVertical(iPhone6: materialParameter.screenShotY))
+                make.top.equalTo(SettingPhotoItemHeight / SCREEN_HEIGHT * layoutVerticalX(iPhone6: materialParameter.screenShotY))
                 make.width.equalTo(SettingPhotoItemWidth / SCREEN_WIDTH * layoutHorizontal(iPhone6: materialParameter.screenShotWidth))
-                make.height.equalTo(SettingPhotoItemHeight / SCREEN_HEIGHT * layoutVertical(iPhone6: materialParameter.screenShotHeight))
+                make.height.equalTo(SettingPhotoItemHeight / SCREEN_HEIGHT * layoutVerticalX(iPhone6: materialParameter.screenShotHeight))
             }
             
             accessoryView.snp.updateConstraints { (make) in
                 make.left.equalTo(SettingPhotoItemWidth / SCREEN_WIDTH * layoutHorizontal(iPhone6: materialParameter.accessoryX))
-                make.top.equalTo(SettingPhotoItemHeight / SCREEN_HEIGHT * layoutVertical(iPhone6: materialParameter.accessoryY))
+                make.top.equalTo(SettingPhotoItemHeight / SCREEN_HEIGHT * layoutVerticalX(iPhone6: materialParameter.accessoryY))
                 make.width.equalTo(SettingPhotoItemWidth / SCREEN_WIDTH * layoutHorizontal(iPhone6: materialParameter.accessoryWidth))
-                make.height.equalTo(SettingPhotoItemHeight / SCREEN_HEIGHT * layoutVertical(iPhone6: materialParameter.accessoryHeight))
+                make.height.equalTo(SettingPhotoItemHeight / SCREEN_HEIGHT * layoutVerticalX(iPhone6: materialParameter.accessoryHeight))
             }
             
             coverView.snp.updateConstraints { (make) in
                 make.left.equalTo(SettingPhotoItemWidth / SCREEN_WIDTH * layoutHorizontal(iPhone6: materialParameter.coverX))
-                make.top.equalTo(SettingPhotoItemHeight / SCREEN_HEIGHT * layoutVertical(iPhone6: materialParameter.coverY))
+                make.top.equalTo(SettingPhotoItemHeight / SCREEN_HEIGHT * layoutVerticalX(iPhone6: materialParameter.coverY))
                 make.width.equalTo(SettingPhotoItemWidth / SCREEN_WIDTH * layoutHorizontal(iPhone6: materialParameter.coverWidth))
-                make.height.equalTo(SettingPhotoItemHeight / SCREEN_HEIGHT * layoutVertical(iPhone6: materialParameter.coverHeight))
+                make.height.equalTo(SettingPhotoItemHeight / SCREEN_HEIGHT * layoutVerticalX(iPhone6: materialParameter.coverHeight))
             }
             
         }
@@ -146,13 +146,14 @@ extension JFPhotoCollectionViewCell {
         }
         
         selectedIconView.snp.makeConstraints { (make) in
-            make.top.equalTo(layoutVertical(iPhone6: -5))
+            make.top.equalTo(layoutVerticalX(iPhone6: -5))
             make.size.equalTo(CGSize(
                 width: layoutHorizontal(iPhone6: 15),
-                height: layoutVertical(iPhone6: 15)))
+                height: layoutVerticalX(iPhone6: 15)))
             make.right.equalTo(layoutHorizontal(iPhone6: 5))
         }
         
     }
     
 }
+

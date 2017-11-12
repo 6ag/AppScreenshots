@@ -78,7 +78,7 @@ class JFDiyViewController: UIViewController {
     
     /// 页码
     fileprivate lazy var pageLabel: UILabel = {
-        let label = UILabel(frame: CGRect(x: 0, y: 20, width: SCREEN_WIDTH, height: 44))
+        let label = UILabel(frame: CGRect(x: 0, y: STATUS_HEIGHT, width: SCREEN_WIDTH, height: 44))
         label.textColor = UIColor.white
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: layoutFont(iPhone6: 16))
@@ -155,13 +155,13 @@ class JFDiyViewController: UIViewController {
         cancelButton.snp.makeConstraints({ (make) in
             make.centerY.equalTo(view)
             make.left.equalTo(0)
-            make.size.equalTo(CGSize(width: layoutHorizontal(iPhone6: 54), height: layoutVertical(iPhone6: 44)))
+            make.size.equalTo(CGSize(width: layoutHorizontal(iPhone6: 54), height: layoutVertical(iPhone6: 44) + STATUS_HEIGHT - 20))
         })
         
         confirmButton.snp.makeConstraints({ (make) in
             make.centerY.equalTo(view)
             make.right.equalTo(0)
-            make.size.equalTo(CGSize(width: layoutHorizontal(iPhone6: 54), height: layoutVertical(iPhone6: 44)))
+            make.size.equalTo(CGSize(width: layoutHorizontal(iPhone6: 54), height: layoutVertical(iPhone6: 44) + STATUS_HEIGHT - 20))
         })
         return view
     }()
@@ -184,8 +184,8 @@ extension JFDiyViewController {
         
         pasterTopView.snp.makeConstraints { (make) in
             make.left.right.equalTo(0)
-            make.top.equalTo(layoutVertical(iPhone6: -44))
-            make.height.equalTo(layoutVertical(iPhone6: 44))
+            make.top.equalTo(layoutVertical(iPhone6: -44) - STATUS_HEIGHT + 20)
+            make.height.equalTo(layoutVertical(iPhone6: 44) + STATUS_HEIGHT - 20)
         }
         
         pasterBottomView.snp.makeConstraints { (make) in
@@ -311,7 +311,7 @@ extension JFDiyViewController: UICollectionViewDelegate, UICollectionViewDataSou
         // 隐藏贴纸顶部视图
         // 从顶部弹出贴纸顶部视图
         pasterTopView.snp.updateConstraints { (make) in
-            make.top.equalTo(layoutVertical(iPhone6: -44))
+            make.top.equalTo(layoutVertical(iPhone6: -44) - STATUS_HEIGHT + 20)
         }
         
         // 隐藏贴纸组集合视图

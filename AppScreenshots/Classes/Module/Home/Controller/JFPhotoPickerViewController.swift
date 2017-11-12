@@ -247,23 +247,23 @@ extension JFPhotoPickerViewController {
         
         navigationView.snp.makeConstraints { (make) in
             make.left.top.right.equalTo(0)
-            make.height.equalTo(layoutVertical(iPhone6: 44) + 20)
+            make.height.equalTo(layoutVertical(iPhone6: 44) + STATUS_HEIGHT)
         }
         
         cancelButton.snp.makeConstraints { (make) in
-            make.top.equalTo(20)
-            make.left.equalTo(layoutHorizontal(iPhone6: 5))
+            make.top.equalTo(STATUS_HEIGHT)
+            make.left.equalTo(layoutHorizontal(iPhone6: 10))
             make.height.equalTo(layoutVertical(iPhone6: 44))
         }
         
         confirmButton.snp.makeConstraints { (make) in
-            make.top.equalTo(20)
-            make.right.equalTo(layoutHorizontal(iPhone6: -5))
+            make.top.equalTo(STATUS_HEIGHT)
+            make.right.equalTo(layoutHorizontal(iPhone6: -10))
             make.height.equalTo(layoutVertical(iPhone6: 44))
         }
         
         titleButton.snp.makeConstraints { (make) in
-            make.top.equalTo(20)
+            make.top.equalTo(STATUS_HEIGHT)
             make.centerX.equalTo(navigationView)
             make.height.equalTo(layoutVertical(iPhone6: 44))
             make.width.equalTo(SCREEN_WIDTH - layoutHorizontal(iPhone6: 150))

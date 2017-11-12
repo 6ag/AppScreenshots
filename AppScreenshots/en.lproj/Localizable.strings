@@ -13,6 +13,7 @@
 "detail_resolution_4_0_inch" = "4.0inch(640*1136)";
 "detail_resolution_4_7_inch" = "4.7inch(750*1334)";
 "detail_resolution_5_5_inch" = "5.5inch(1242*2208)";
+"detail_resolution_5_8_inch" = "5.8inch(1125*2436)";
 "detail_main_title" = "Main title";
 "detail_sub_title" = "Subtitle";
 "detail_preview" = "Preview";

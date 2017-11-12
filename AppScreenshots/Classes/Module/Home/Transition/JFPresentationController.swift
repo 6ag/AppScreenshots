@@ -13,7 +13,7 @@ class JFPresentationController: UIPresentationController {
     /// 关闭按钮
     fileprivate lazy var closeButton: UIButton = {
         let closeButton = UIButton(type: .custom)
-        closeButton.frame = CGRect(x: 0, y: 20, width: layoutHorizontal(iPhone6: 44), height: layoutVertical(iPhone6: 44))
+        closeButton.frame = CGRect(x: 0, y: STATUS_HEIGHT, width: layoutHorizontal(iPhone6: 44), height: layoutVertical(iPhone6: 44))
         closeButton.setImage(UIImage(named: "nav_return"), for: .normal)
         closeButton.alpha = 0.0
         closeButton.addTarget(self, action: #selector(didTappedCloseButton(_:)), for: .touchUpInside)

@@ -69,7 +69,7 @@ extension JFHomeViewController {
         
         navigationView.snp.makeConstraints { (make) in
             make.left.top.right.equalTo(0)
-            make.height.equalTo(layoutVertical(iPhone6: 44) + 20)
+            make.height.equalTo(layoutVertical(iPhone6: 44) + STATUS_HEIGHT)
         }
         
         containerView.snp.makeConstraints { (make) in
@@ -102,7 +102,7 @@ extension JFHomeViewController: UICollectionViewDelegate, UICollectionViewDataSo
         
         // 计算item相对于窗口的frame
         let x = indexPath.item % 2 == 0 ? rect.origin.x : rect.origin.x / 2 + layoutHorizontal(iPhone6: 4)
-        let y = layoutVertical(iPhone6: 44) + 20
+        let y = layoutVertical(iPhone6: 44) + STATUS_HEIGHT
             + CGFloat(indexPath.item / 2) * (rect.size.height + layoutVertical(iPhone6: 8))
             - collectionView.contentOffset.y
             + layoutVertical(iPhone6: 4)
@@ -119,7 +119,7 @@ extension JFHomeViewController: UICollectionViewDelegate, UICollectionViewDataSo
         UIView.animate(withDuration: 0.5, animations: { 
             tempImageView.frame = CGRect(
                 x: layoutHorizontal(iPhone6: 79.5),
-                y: layoutVertical(iPhone6: 225) + 20,
+                y: layoutVertical(iPhone6: 225) + STATUS_HEIGHT,
                 width: layoutHorizontal(iPhone6: 56),
                 height: layoutVertical(iPhone6: 100))
         }) { (_) in

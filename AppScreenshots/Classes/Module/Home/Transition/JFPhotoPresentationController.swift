@@ -26,7 +26,7 @@ class JFPhotoPresentationController: UIPresentationController {
         let popWidth: CGFloat = layoutHorizontal(iPhone6: 300)
         let popHeight: CGFloat = layoutVertical(iPhone6: 370)
         
-        presentedView?.frame = CGRect(x: (SCREEN_WIDTH - popWidth) * 0.5, y: 20 + layoutVertical(iPhone6: 40), width: popWidth, height: popHeight)
+        presentedView?.frame = CGRect(x: (SCREEN_WIDTH - popWidth) * 0.5, y: STATUS_HEIGHT + layoutVertical(iPhone6: 40), width: popWidth, height: popHeight)
     }
     
     /**

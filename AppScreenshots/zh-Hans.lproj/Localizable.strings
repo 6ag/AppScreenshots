@@ -13,6 +13,7 @@
 "detail_resolution_4_0_inch" = "4.0英寸(640*1136)";
 "detail_resolution_4_7_inch" = "4.7英寸(750*1334)";
 "detail_resolution_5_5_inch" = "5.5英寸(1242*2208)";
+"detail_resolution_5_8_inch" = "5.8英寸(1125*2436)";
 "detail_main_title" = "主标题";
 "detail_sub_title" = "副标题";
 "detail_preview" = "预览";

@@ -10,7 +10,7 @@ import UIKit
 
 /// 预览视图
 class JFPreviewView: UIView {
-
+    
     /// 应用截图视图集合
     fileprivate var photoViewList: [JFPhotoView]
     
@@ -111,3 +111,4 @@ extension JFPreviewView: UIScrollViewDelegate {
     }
     
 }
+

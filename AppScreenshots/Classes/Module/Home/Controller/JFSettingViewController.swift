@@ -58,7 +58,7 @@ class JFSettingViewController: UIViewController {
         view.endEditing(true)
         
         let configuration = FTConfiguration.shared
-        configuration.menuRowHeight = layoutVertical(iPhone6: 45)
+        configuration.menuRowHeight = 45
         configuration.menuWidth = layoutHorizontal(iPhone6: 135)
         configuration.textColor = UIColor.colorWithHexString("c4c4c4")
         configuration.textFont = UIFont.systemFont(ofSize: layoutFont(iPhone6: 16))
@@ -307,14 +307,24 @@ class JFSettingViewController: UIViewController {
         button4.setTitle(NSLocalizedString("detail_resolution_5_5_inch", comment: ""), for: .normal)
         button4.addTarget(self, action: #selector(didTapped(button:)), for: .touchUpInside)
         
-        // 默认选中4.7寸
-        button4.isSelected = true
+        let button5 = UIButton(type: .custom)
+        button5.contentHorizontalAlignment = .left
+        button5.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+        button5.setTitleColor(UIColor.colorWithHexString("808080"), for: .normal)
+        button5.titleLabel?.font = UIFont.systemFont(ofSize: layoutFont(iPhone6: 16))
+        button5.setImage(UIImage(named: "size_weixuanzhong"), for: .normal)
+        button5.setImage(UIImage(named: "size_selected"), for: .selected)
+        button5.setTitle(NSLocalizedString("detail_resolution_5_8_inch", comment: ""), for: .normal)
+        button5.addTarget(self, action: #selector(didTapped(button:)), for: .touchUpInside)
+        
+        button5.isSelected = true
         
         view.addSubview(label)
         view.addSubview(button1)
         view.addSubview(button2)
         view.addSubview(button3)
         view.addSubview(button4)
+        view.addSubview(button5)
         
         label.snp.makeConstraints({ (make) in
             make.left.equalTo(layoutHorizontal(iPhone6: 14))
@@ -342,6 +352,12 @@ class JFSettingViewController: UIViewController {
         button4.snp.makeConstraints({ (make) in
             make.left.equalTo(button1.snp.left)
             make.top.equalTo(button3.snp.bottom).offset(layoutVertical(iPhone6: 16))
+            make.right.equalTo(0)
+        })
+        
+        button5.snp.makeConstraints({ (make) in
+            make.left.equalTo(button1.snp.left)
+            make.top.equalTo(button4.snp.bottom).offset(layoutVertical(iPhone6: 16))
             make.right.equalTo(0)
         })
         
@@ -433,6 +449,10 @@ class JFSettingViewController: UIViewController {
         let button = UIButton(type: .custom)
         button.setTitle(NSLocalizedString("detail_preview", comment: ""), for: .normal)
         button.setTitleColor(UIColor.colorWithHexString("333333"), for: .normal)
+        button.layer.cornerRadius = 5
+        button.layer.masksToBounds = true
+        button.layer.borderColor = UIColor.colorWithHexString("f7ce00").cgColor
+        button.layer.borderWidth = 2
         button.setBackgroundImage(
             UIColor
                 .colorWithHexString("f7ce00")
@@ -485,11 +505,11 @@ extension JFSettingViewController {
         
         navigationView.snp.makeConstraints { (make) in
             make.left.top.right.equalTo(0)
-            make.height.equalTo(layoutVertical(iPhone6: 44) + 20)
+            make.height.equalTo(layoutVertical(iPhone6: 44) + STATUS_HEIGHT)
         }
         
         moreButton.snp.makeConstraints { (make) in
-            make.top.equalTo(20)
+            make.top.equalTo(STATUS_HEIGHT)
             make.right.equalTo(layoutHorizontal(iPhone6: -5))
             make.size.equalTo(CGSize(width: layoutHorizontal(iPhone6: 44), height: layoutVertical(iPhone6: 44)))
         }
@@ -514,7 +534,7 @@ extension JFSettingViewController {
         sizeBgView.snp.makeConstraints { (make) in
             make.centerX.equalTo(containerView)
             make.top.equalTo(templateBgView.snp.bottom).offset(layoutVertical(iPhone6: 15))
-            make.size.equalTo(CGSize(width: layoutHorizontal(iPhone6: 334), height: layoutVertical(iPhone6: 163)))
+            make.size.equalTo(CGSize(width: layoutHorizontal(iPhone6: 334), height: layoutVertical(iPhone6: 190)))
         }
         
         titleBgView.snp.makeConstraints { (make) in
@@ -756,6 +776,8 @@ extension JFSettingViewController {
                         size = CGSize(width: 750, height: 1334)
                     case NSLocalizedString("detail_resolution_5_5_inch", comment: ""): // 5.5 - 1242*2208
                         size = CGSize(width: 1242, height: 2208)
+                    case NSLocalizedString("detail_resolution_5_8_inch", comment: ""): // 5.8 - 1125*2436
+                        size = CGSize(width: 1125, height: 2436)
                     default:
                         break
                     }
