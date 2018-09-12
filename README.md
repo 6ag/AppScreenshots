@@ -11,12 +11,6 @@ If you do not understand what the App is doing, it means you are not a qualified
 
 - This app is no technical difficulties, some only creative. 这个app没有什么技术难点，有的只有创意。
 
-## AppStore
-
-<a target='_blank' href='https://itunes.apple.com/app/id1205269443'>
-<img src='http://ww2.sinaimg.cn/large/0060lm7Tgw1f1hgrs1ebwj308102q0sp.jpg' width='144' height='49' />
-</a>
-
 ## Development environment 开发环境
 
 *XCode8.2.1* + *swift3.0* ，如果下载项目后，编译失败，请检查 `XCode` 版本是否满足。
